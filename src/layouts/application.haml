@@ -1,0 +1,40 @@
+!!! XML
+!!!
+%html
+  %head
+    /= blueprintcss(:compressed => false)
+    = stylesheets
+    %meta{:"http-equiv" => "content-type", :content => "text/html; charset=utf-8"}
+    %meta{:name => "description", :content => "OpenSprints - Bringing GoldSprints to the Masses"}
+    %meta{:name => "keywords", :content => "goldsprints,opensprints,bicycles,DIY"}
+    %meta{:name => "author", :content => "Evan Farrar"}
+    %meta{:name => "generator", :content => "staticmatic - http://staticmatic.rubyforge.org"}
+    %link{:href => "/news/?rss=1", :title => "RSS 0.92", :type => "application/rss+xml", :rel => "alternate"}
+    %link{:href => "/news/?atom=1", :title => "Atom 1.0", :type => "application/atom+xml", :rel => "alternate"}
+
+    %title opensprints.org - Bringing GoldSprints to the Masses
+    %link{:rel => "stylesheet", :href => "stylesheets/screen.css", :type => "text/css", :media => "screen, print"}
+  %body
+    .top.container
+      .span-2
+      .span-20.header.middle
+        %h1 OpenSprints
+      .span-2.last
+    .container
+      .span-8.append-1
+        %img{:src => "images/board.jpg"}
+      .intro.span-14
+        .p{:style => "font-size: 27px"}
+          OpenSprints is a system of open source hardware, software and instructions for building and running GoldSprints, a style of racing stationary bikes.
+        #amanda
+        .go
+          %h1 Learn More:
+          .span-4
+            %a{:href => "/news"}
+              %h3 News
+          .span-4
+            %a{:href => "http://wiki.opensprints.org"}
+              %h3 Documentation 
+          .span-4
+            %a{:href => "http://opensprints.org/forum"}
+              %h3 Support
