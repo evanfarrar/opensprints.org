@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head profile="http://gmpg.org/xfn/1">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="author" content="textpattern" />
+<meta name="rating" content="General" />
+<meta name="generator" content="TextPattern" />
+<meta name="revisit-after" content="14 days" />
+<link rel="stylesheet" href="<txp:css />" type="text/css" media="screen" />
+<link rel="alternate" type="application/rss+xml" title="RSS 0.92" href="/?rss=1" />
+<link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="/?atom=1" />
+<txp:if_individual_article><title><txp:section title="1" />: <txp:page_title /></title></txp:if_individual_article><txp:if_article_list><txp:if_section name=""><title>Home Page: <txp:sitename /></title><txp:else /><title><txp:section title="1" />: <txp:sitename /></title></txp:if_section></txp:if_article_list>
+
+</head>
+<txp:if_section name=",default">
+<body id="home">
+<txp:else />
+<body id="<txp:section />">
+</txp:if_section>
+
+<div id="accessibility">
+<a href="#content" title="Go to content">Go to content</a> 
+<a href="#sidebar" title="Go to menu">Go to menu</a> 
+</div>
+
+<div id="wrap">
+
+<div id="header">
+<h1><txp:link_to_home><txp:site_name /></txp:link_to_home></h1>
+<p class="description"><txp:site_slogan /></p>
+</div>
+
+<div id="content">
+
+<txp:if_section name=",default,articles">
+
+<txp:if_article_list>
+
+<txp:article limit="2" />
+
+<div class="navigation">
+<div class="alignleft"><txp:older>Previous Entries</txp:older></div>
+<div class="alignright"><txp:newer>Next Entries</txp:newer></div>
+</div>
+
+<txp:else />
+
+<txp:article />
+
+</txp:if_article_list>
+
+</txp:if_section>
+
+<txp:if_section name="about">
+
+<txp:article />
+
+</txp:if_section>
+
+</div>
+
+<txp:output_form form="sidebar" />
+
+</div>
+
+<txp:output_form form="footer" />
+
+</body>
+</html>

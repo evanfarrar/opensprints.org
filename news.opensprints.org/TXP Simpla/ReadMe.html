@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://gmpg.org/xfn/1">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Instructions for Installing TXP Simpla</title>
+<style type="text/css">
+<!--
+a {
+color:#000000;
+}
+
+a:hover {
+color:#005D93;
+}
+
+p {
+font-size:1.1em;
+line-height:1.6em;
+color:#5b5b5b;
+}
+
+p.warning {
+color:#000000;
+border: 2px solid #990000;
+width:80%;
+text-align:justify;
+padding:5px 10px 5px 10px;
+margin-left:auto;
+margin-right:auto;
+}
+
+h1,h2 {
+color:#005D93;
+text-decoration:underline;
+}
+
+h1 {
+text-align:center;
+font-size:2em;
+}
+
+h2 {
+font-size:1.5em;
+}
+
+#footer {
+border-top:1px solid #005D93;
+border-bottom:1px solid #005D93;
+color:#005D93;
+text-align:center;
+}
+-->
+</style>
+
+</head>
+
+<body>
+
+<h1>Installing TXP Simpla</h1>
+
+<h2>Preamble</h2>
+
+<p>Welcome to TXP Simpla. This is a 2-column theme from <a href="http://ifelse.co.uk">Phu Ly</a> which has been ported to TXP by yours truly and will only work with TXP 4.0.2+ due to it's use of newly added and modified tags. If you don't have this or a later version of Textpattern you will need to upgrade in order to use this System. You are advised to upgrade anyway so do it NOW! The theme is as close to the original WordPress Version in style as possible.</p>
+
+<ul>
+<li><p>First of all let me ask you to join the Textpattern forum. We have experts coming out of our ears over there and they are willing to help anyone who wants to advance their knowledge of how TXP works and can be used.</p></li>
+<li><p>Second let me ask you to take your time with this install. Rushing never helped anyone except into an early grave. One step at a time.</p></li>
+<li><p>Third, if you have been using something else such as WordPress you are just going to find TXP <em>different</em>. There is no getting away from that fact. It doesn't <em>look</em> the same, it doesn't <em>feel</em> the same and it certainly doesn't <em>work</em> in the same way. It will take time for you to get used to it, but when you do, when that penny drops, you're going to wonder why all software isn't made this well. <em>Seriously</em>. And also remember that TXP is a CMS. It is not pure blogging software. It can be used for all kinds of different sites, even ones that don't have blogs. Yes I know. Sounds weird eh? <em>No blog!</em></p></li>
+<li><p>Fourth, we are going to be overwriting existing templates so you should make a back-up of them just in case you want to return to them at a later date. They can be copy/pasted into txt files just like the ones included here, or you can copy them to a new name in TXP.</p></li>
+<li><p>Fifth, make yourself a nice cup of coffee or my preference, a nice <em>cuppa cha</em>, and then let's get on with it.</p></li>
+</ul>
+
+<h2>Images</h2>
+
+<p>You must ensure that the <em>/images/</em> directory of your website has been chmod 777 or you will not be able to upload images to it.</p>
+<p>First you could do with creating a category for your images. Go to the <em>Organise</em> tab and in the <em>Images</em> column put a category name into the text box and save it. I normally create a <em>Website</em> category for images I use in my site layout. Call it what you like.</p>
+<p>Now go to the <em>Images</em> tab. Click on the <em>Browse</em> button and find the downloaded images on your PC/Mac. Select one then click on the <em>Upload</em> button. TXP will upload the image and you will see a new screen with the image on it. There is a category drop-down box where you can select the category you have just created. You should also put something into the <em>alt</em> text box as this is used in the <em>img</em> tag. Scroll down the page and click on <em>Save</em>. You will now be taken back to the first screen where you will see the image title in the listing. Repeat this for the all the images included in the download. You will not see the images themselves in the listing unless you have created or uploaded a thumbnail for them and it isn't really necessary.</p>
+
+<h2>CSS</h2>
+
+<p>Throughout TXP Simpla it is assumed that you are using the default CSS file. Go to <em>presentation/style</em> and you will be shown the <em>default</em> CSS. Delete everything that is in the text box (you cannot delete the file) then open up the CSS.txt file from the download and copy/paste it into the text box and save it. Done.</p>
+<p>If you want to call the CSS something else, click on <em>Create or load new CSS</em> on the left of the text box then copy/paste the CSS.txt file from the download into the empty text box, give it a name in the little text box at the top and save it. You will need to go to the head section in default page template and change the CSS call to reflect the name of your CSS.</p>
+<p>You will also need to change the stylesheet option for each of the sections in the <em>Sections</em> tab but we will get to that in a bit. Leave it for now.</p>
+<p>There are images in the CSS which will need to have their URLs changed. They need to be changed to the number that your TXP install allocated to them when you uploaded them so you should end up with something similar to this:-</p>
+<p>background:#fff url(/images/2.png) repeat-x;</p>
+<p>There is a simple way of saving some time when doing this. Once you have the images uploaded keep your TXP install open at the images tab then, on your PC/Mac, open up your favourite editor and open the new CSS with it. With both of these open you can easily go through the new CSS and flick between TXP and your editor to pick up the numbers you need for the image URLs. Once you have finished you can then copy/paste the revised CSS to your TXP install.</p>
+<p>That's it for the CSS.</p>
+
+<h2>Page Templates</h2>
+
+<p>In the folder called <em>Page Templates</em> you will find 1 text file. I don't believe in creating page templates just for the sake of it. The flexibility of TXP is partly in it's templates. I create form templates for all sorts of things as you will find out shortly. You can, of course, create page templates as well which increases the flexibility but let's keep things simple. TXP comes with 3 page templates already, <em>default</em>, <em>archive</em> and <em>error_default</em>. My version of the default page template has been modified somewhat and this theme doesn't use the archive page template.</p>
+<p>In TXP go to <em>presentation/pages</em>. This will normally show you the default page template. You can't delete this one so don't bother trying. What you can do is select all the text and delete it so you have an empty text box. Now open the <em>default.txt</em> file from the download and copy/paste the whole thing into the text box and save it.</p>
+<p>That's the page templates done!</p>
+
+<h2>Form Templates</h2>
+
+<p>In the folder called <em>Form Templates</em> you should find 8 text files. Not that many really for me and it's a simple enough process. There are plenty more in some other Systems of mine. You will see that some of the forms already exist in your forms listing in which case you can follow the same procedure as you did for the page templates with one extra process which I will get to in a minute. For the new ones simply click on <em>Create new form</em> above the listing on the right and you will be presented with an empty text box to fill.</p>
+<p>The difference between form templates and page templates is that you need to tell TXP what <em>type</em> of form it is so that it can list it correctly in the various <em>drop-down</em> boxes used throughout TXP. Below the main text box you will see 2 smaller boxes. The top one is for the Form name. The second one is for the Form type. Both are <em>required</em>. I have used a specific naming convention to name the form template text files included here.</p>
+
+<ul>
+<li><p>First, all the files here end with the .txt suffix. You can ignore this completely. It is simply the type of file you are looking at. In fact the only things in the download that aren't txt files are the image files and this one.</p></li>
+<li><p>Second, all the file names contain the word <em>template</em>. You can ignore this as well but it is being used as a kind of divider. What comes before the word <em>template</em> is the form name and should be used in the <em>Form name</em> text box. What comes after the word <em>template</em> is the form type and this is what should be selected in the <em>Form type</em> drop-down box.</p></li>
+</ul>
+
+<p>So as an example:-</p>
+<p>Look at the file comments Template comment.txt  No don't open it, just look at the file name.</p>
+<p>Totally ignore the .txt suffix.</p>
+<p>The first part - comments - is the Form name.</p>
+<p>The bit after the word <em>Template</em> is comment. That is the Form type.</p>
+<p>Now just as you did with the page templates either overwrite any existing form templates or create new ones by clicking on the <em>Create new form</em> link at the top of the right menu, remembering to fill in the Form name and Form type boxes as well. If you are overwriting existing forms these boxes should already be filled in and I haven't changed these at all but do check! If you save a form without a name it will appear at the top of the form listing as a blank. You will not be able to select it. All you can do is delete and recreate it again. If you save a form with the wrong form type you will be able to change it and re-save.</p>
+
+<h2>Sections</h2>
+
+<p>You are going to need some <em>sections</em>, but the ones used here should already exist in a default TXP install. Go to the <em>Sections</em> tab. You should already have <em>default</em>, <em>about</em> and <em>article</em> sections listed there. If you don't have them then create them by entering the name into the little box at the top of the page and clicking on the "Create" button.</p>
+<p>Now you can see that all of the sections can have various selectable attributes.</p>
+
+<ul>
+<li><p>First of all they will all use the default style sheet unless you have created a separate style sheet in which case select that from the drop-down list.</p></li>
+<li><p>Second, they will all use the default page template.</p></li>
+<li><p>Third, you can select <em>no</em> in all the little radio buttons for the <em>about</em> section and select <em>yes</em> in all of them for the <em>article</em> section. (The default section doesn't have these <em>radio</em> buttons.)</p></li>
+</ul>
+
+<p>Please note that when you are modifying the attributes for sections you can only modify and save ONE section at a time. Don't try going through the whole lot and saving at the bottom. It just won't work!</p>
+<p>You may want to include other sections in the <em>search</em> but personally I don't think the ones used here are worth searching. It's up to you.</p>
+<p>That's it for the sections. Easy really eh?</p>
+
+<h2>Plug-ins</h2>
+
+<p>In the plug-ins folder I have included the 1 plug-in used in TXP Simpla. They are easy to install so don't get the jitters.</p>
+<p>In TXP go to <em>Admin/Plugins</em>. At the top of the page is a text box. Now find your way to wherever you have stored your TXP Simpla files. Go into the plug-ins folder and open the file. Click on <em>Edit</em> in the menu and then click on <em>Select all</em>. Click on <em>Edit</em> again and click on <em>Copy</em>. Now go back to your TXP plug-in page, <em>paste</em> the text into the box and click on the <em>Upload</em> button. Once TXP has loaded the file you will see a new screen with lots of code on it. That's the plug-in code.</p>
+<p>Scroll down the page and click on the <em>Install</em> button. You will now be taken back to the first page again where you will see the plug-in details in the listing. On the right you will see the word <em>No</em>. Click on it and it will change to <em>Yes</em>. You have just installed and activated a plug-in. Now tell me that was easy or what.</p>
+<p>Whilst we are here click on the word <em>Help</em> on the right of one of the plug-ins. The page you see will give you information about what each plug-in does and various attributes that can be used to give you extra functionality. Very nice.</p>
+<p>If you click on the word <em>Edit</em> you will see that page full of code again only this time, if you know what you are doing, you can edit or <em>hack</em> the code in order to make the plug-in do something specific that you want which it doesn't normally do. If you don't know what you are doing I should stay away from this page.</p>
+<p>Another thing you might like to know is that if a plug-in is upgraded you can upload it just as I described above and it will overwrite itself. No need to delete the old version first but you will need to re-activate it.</p>
+
+<h2>Other Stuff</h2>
+
+<p>If you are using a sub-directory you will need to add your sub-directory name to all the image URLs in the CSS.</p>
+<p>In the <em>sidebar form template</em> you will need to add extra <em>linklist</em> tags and <em>titles</em> to pick up all the links you have in different categories. Just copy the existing code changing the title and category name to suit.</p>
+<p>In order for you to actually see anything on the <em>About</em> page you will need to write an article. The About article will contain all the information you would normally put on an about page. Before you save the article ensure that you have attached it to the <em>about</em> section and turned comments <em>off</em>. Do not give it a category unless you want it to appear in category lists which isn't normally advisable. Once you have created this you will be able to see it by clicking on the appropriate menu link.</p>
+<p>One other important thing is how you have your URLs set-up in <em>Preferences</em>. This install assumes that you are using clean URLs in the <em>/section/id/title</em> format. You can use any format you like including <em>messy</em> URLs but if you use <em>messy</em> URLs you will need to modify all the menu calls in the <em>sidebar</em> form template to match your preference.</p>
+<p>Please retain the credits in the CSS file. It's not a legal requirement, just good manners.</p>
+<p>If you have followed everything here you should now have a beautiful working copy of TXP Simpla. This is just the start. As you get to know TXP better you will be able to expand your site further whilst maintaining the TXP Simpla style, then, as your HTML and CSS skills improve (and maybe PHP as well) you should be able to modify the layout or create your own unique style. It all takes time though so be patient and enjoy Textpattern with TXP Simpla. There's nothing better.</p>
+<p>Catch ya later,</p>
+<p>Stuart.</p>
+
+<div id="footer">
+<p><strong>TXP Simpla</strong> is controlled by <a href="http://www.textpattern.com" title="Textpattern - The Better Alternative">Textpattern</a> and ported with a little <strong>Magic Dust</strong> by <a href="http://thebombsite.com/">Stuart</a>.</p>
+<p>And it's <a href="http://validator.w3.org/check/referer">XHTML 1.0 Strict</a> cuz you <em>know</em> it makes sense.</p>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<div class="entry">
+
+<div class="entrytitle">
+<h2><txp:permlink><txp:title /></txp:permlink></h2>
+<txp:if_section name=",default,articles"><h3><txp:posted /></h3></txp:if_section>
+</div>
+
+<div class="entrybody">
+<txp:if_article_list>
+<txp:if_excerpt>
+<txp:excerpt />
+<br />
+<txp:permlink>But there's more</txp:permlink>
+<txp:else />
+<txp:body />
+</txp:if_excerpt>
+<txp:else />
+<txp:body />
+</txp:if_article_list>
+</div>
+
+<div class="entrymeta">
+<div class="postinfo">
+<span class="postedby">Posted by <txp:author link="0" /></span>
+<txp:if_section name=",default,articles"><span class="filedto">Filed in <txp:category1 title="1" link="1" this_section="1" /></span></txp:if_section>
+</div>
+<txp:if_article_list><txp:if_comments><span class="commentslink"></txp:if_comments></txp:if_article_list><txp:comments_invite /><txp:if_article_list><txp:if_comments></span></txp:if_comments></txp:if_article_list>
+</div>
+
+</div>

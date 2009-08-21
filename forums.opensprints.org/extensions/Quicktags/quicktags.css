@@ -1,0 +1,30 @@
+#quicktags {
+	padding-bottom: 10px;
+}
+
+#quicktags input {
+	height: 20px;
+}
+
+#quicktags #ed_strong {
+	font-weight: bold;
+}
+
+#quicktags #ed_link {
+	color: blue;
+	text-decoration: underline;
+}
+
+#quicktags #ed_del {
+	text-decoration: line-through;
+}
+
+#quicktags #ed_em {
+	font-style: italic;
+}
+
+#quicktags #ed_code {
+	font-family: "Courier New", Courier, mono;
+	/* Make this button a wee bit shorter, because Courier affects the button's height */
+	height: 19px;
+}

@@ -1,0 +1,342 @@
+Changes in 4.0.8
+
+* Fixed: Current section/category is overwritten in <txp:section_list> and <txp:category_list> (container or form mode)
+* Fixed: Registration and notification mails are not sent in PHP safe mode.
+* Fixed: Error message upon article save from MySQL 5 in 'strict' mode.
+* Fixed: Timeout during "clean URL test" causes WSOD in diagnostics tab.
+* Partly fixed: Search result excerpt breaks HTML entities.
+* Changed tag: <txp:if_section> without a name attribute is now TRUE on a section page (old behaviour is preserved on upgrades).
+* Changed tag: <txp:if_category name=""> is now FALSE on a category page (old behaviour is preserved on upgrades).
+* Changed tag: <txp:link_url /> escapes its output.
+* Changed tag: <txp:file_download_list /> uses "wraptag", "break", and "label" attributes consistently like other tags.
+* Speed: faster plugin loading from the database.
+* Diagnostics tab: ignore line endings when checking for modified files and show full paths.
+* Pages tab: allow 'default' page to be deleted if not used by a section.
+* Developer: Fall back to standard page/permlink behaviour if custom_url_func() returns FALSE.
+* Developer: set_pref() accepts an optional "position" parameter.
+
+Changes in 4.0.7
+
+* Parser: full nesting support, allowing unlimited nesting of identical tags.
+* Parser: attribute values are parsed when enclosed in single quotes.
+* Parser: unquoted attribute values are deprecated and will result in warnings when site status is not set to 'live'. Fix your templates and use double quotes to delimit attribute values.
+* Feature: Expiry time for articles, accompanied by related tags
+* Speed: various components of the parsing process have been optimized, which compensates the impact of increased parser complexity, resulting in slightly faster parsing speed
+* New tags: <txp:expires />, <txp:if_expired>, <txp:if_expires>
+* New tag: <txp:if_keywords>
+* New tags: <txp:if_first_section>, <txp:if_last_section>
+* New tags: <txp:if_first_category>, <txp:if_last_category>
+* New tag: <txp:if_variable>
+* New tag: <txp:modified />
+* New tag: <txp:rsd /> specifies the Really Simple Discovery endpoint for XML-RPC clients
+* New tag: <txp:variable />
+* Changed tag: <txp:article /> can be used as a container tag
+* Changed tag: <txp:article /> allows new attributes 'wraptag' and 'break'
+* Changed tag: <txp:article_custom /> can be used as a container tag
+* Changed tag: <txp:article_custom /> allows new attributes 'wraptag' and 'break'
+* Changed tag: <txp:article_custom /> allows comma separated list for 'id' attributes (this doesn't imply a sort order).
+* Changed tag: <txp:category /> applies 'class' attribute to the <a> element when wraptag is empty.
+* Changed tag: <txp:category_list /> can be used as a container tag
+* Changed tag: <txp:category_list /> accepts a 'children' attribute which limits the list depth to one level below the parent category when set to '0'.
+* Changed tag: <txp:file_download_list /> can be used as a container tag
+* Changed tag: <txp:if_article_id /> defaults to the current article's id.
+* Changed tag: <txp:linklist /> can be used as a container tag
+* Changed tag: <txp:recent_comments /> can be used as a container tag
+* Changed tag: <txp:recent_comments /> allows new attribute 'offset'
+* Changed tag: <txp:search_input /> allows new attribute 'html_id' to set the form's id.
+* Changed tag: <txp:section /> applies the 'class' attribute to the <a> element when wraptag is empty.
+* Changed tag: <txp:section_list /> can be used as a container tag
+* XML-RPC: server now included in main TXP package, disabled by default
+* Articles tab: added 'article image' and 'keywords' as search criteria
+* Categories tab: categories cannot be accidentally deleted if they are still in use.
+* Write tab: Concurrent article edit warning
+* Write tab: WYSIWYG preview for draft/pending/hidden articles
+* Images tab: added 'alternate text' and 'caption' as search criteria
+* Images tab: multi-edit functionality (delete, change category)
+* Images tab: setting both thumb width and height to zero or empty values disables auto-thumbnailing
+* Links tab: multi-edit functionality (change category)
+* Files tab: multi-edit functionality (delete, change category)
+* Users tab: multi-edit functionality (delete, reset password, change privilege)
+* Users tab: sortable and paginated author list
+* Users tab: 'last login' shown in author list
+* Plugins tab: User-selectable plugin load order
+* Plugins tab: sortable and multi-edit functionality (change order/status, delete)
+* More verbose "First Post" article with basic instructions and helpful links.
+* Developer: getTree() receives an optional 'table' name, returned array contains 'parent' field.
+* Developer: New event 'pretext_set'.
+* Developer: new plugin type '3' for admin-only plugins (0=public, 1=admin+public, 2=library)
+* Developer: fInput now uses htmlspecialchars on the value parameter (previously only escape_title)
+* Developer: pagelinkurl() calls a custom URL handler if present. NB: The custom URL handlers function signature is modified, as an additional flag discerns pagelinks from permlinks.
+* Developer: $txpcfg['ftindex_columns'] may contain an arrray of column names defining the fulltext-indexed set. A corresponding MySQL fulltext index must be established previously.
+* jQuery 1.2.6
+* Ability to connect to the MySQL server through SSL
+
+Changes in 4.0.6
+
+* Security: add missing escape in SQL query (admin side)
+* Security: safer use of txp_login cookie + nonce (note: users are logged out after upgrading!)
+* Security: fixed XSS vulnerability (thanks DSecRG) and input validation in setup script.
+* Security: fixed local file include vulnerability (publisher only) in textpattern/index.php (thanks DSecRG and Victor)
+* Security: fixed XSS vulnerability and parameter value overflow in comments preview (thanks DSecRG)
+* Security: escape request method as shown on logs tab (thanks Victor)
+* Changed tag: <txp:thumbnail /> allows non-JS links to the full-size image
+* Changed tag: <txp:article_custom /> allows comma-separated lists for category, section and author attributes (thanks Manfre)
+* Changed tag: <txp:linklist /> allows comma-separated list for category attribute
+* Changed tag: <txp:file_download_list /> allows comma-separated list for category attribute
+* Changed tag: <txp:recent_articles /> allows comma-separated lists for category and section attribute
+* Changed tag: <txp:related_articles /> allows comma-separated list for section attribute
+* Changed tag: <txp:search_result_excerpt /> allows a custom "break" attribute defaulting to an ellipsis
+* Deprecated tag: <txp:sitename /> replaced by <txp:site_name />
+* Deprecated tag: <txp:request_uri /> replaced by <txp:page_url />
+* Deprecated tag: <txp:s /> replaced by <txp:page_url type="s" />
+* Deprecated tag: <txp:c /> replaced by <txp:page_url type="c" />
+* Deprecated tag: <txp:q /> replaced by <txp:page_url type="q" />
+* Deprecated tag: <txp:id /> replaced by <txp:page_url type="id" />
+* Deprecated tag: <txp:pg /> replaced by <txp:page_url type="pg" />
+* Deprecated function: escape_output(), use htmlspecialchars() instead
+* Deprecated function: gAtt() (and getAtt()), use lAtts() instead
+* Deprecated variable: $txpcfg['txpath'], use constant 'txpath' instead
+* New tag: <txp:if_search_results> </txp:if_search_results>
+* New tag: <txp:search_term />
+* New languages: Croatian, Korean, Português (Brasil), Serbian (Latin + Cyrillic), Turkish and Vietnamese (thanks: Filip Baraka, Alexsander Albert Santana, Vladimir Siljkovic, Süleyman Şentürk, Quang Anh Do)
+* Developer: using add_privs() for admin-side plugins is now required (used to be optional for publisher-only plugins)
+* Developer: dmp() prints debug output to a file in the temporary directory according to preferences. Define 'txpdmpfile' for the file name.
+* Developer: Added 'modified' and 'status' to global $thisarticle array
+* Developer: Added 'is_logged_in()' function to check on the public side if the visitor is logged in on the admin side
+* Speed: less SQL queries (-2 for individual article pages, -1 for other pages)
+* Speed: recent_comments tag (thanks Manfre) and admin side comments list only uses 1 query
+* Added 'password reset' functionality (with confirmation email) on the login screen
+* Update to jQuery 1.2.2 as a default JavaScript library
+* Fix textile list incompatibility with PHP 5.2.4 (and higher)
+* Fix http-auth when using lighttpd or (mostly) apache+fcgi
+* Fix HTTPS protocol check for ISAPI with IIS
+* Fix use of article tags on a sticky article page
+* Pages, categories and styles cannot be accidentally deleted if they are used on other tabs.
+* Corrections in the tag builder
+* Refrain from showing sticky articles from non-frontpage sections in search results
+* Enable separate search section for messy URL mode
+* Many, many minor improvements, see:
+  http://dev.textpattern.com/log/development/4.0?action=stop_on_copy&rev=2802&stop_rev=2471
+
+Changes in 4.0.5
+
+* Fixed security issue on public-side (XSS) (thanks zarathu)
+* Fixed path disclosure issue (thanks zarathu)
+* Search for posted and last modifed dates in article list
+* New tag: <txp:hide /> as a container for comments and other internal content
+* Changed tags: <txp:comments />, <txp:category_list />, <txp:section_list />
+  and <txp:image_index /> support 'sort' attribute
+* Distribute jQuery 1.1.2 as a default JavaScript library
+* Keep image properties on replacement
+* Add 'delete thumbnail' function
+* Support back end branding: customizable logo and color bar
+* Table sort indicators
+* Textile improvements
+* Fix non-utf8 mails (iso 8859-1)
+* better wrapping in admin-interface to prevent horizontal scrollbar
+* Add comment status to comment notification mails
+* Fix "infinite" pagination in rare edge cases
+* Work around apache bug for file-downloads (in connection with mod_deflate)
+* Fix error messages on wrong logins for older mysql versions
+* Fix comment spam blacklist false positives (see faq for 4.0.4)
+* Fix file_download-tag from showing the same url for different downloads (see faq for 4.0.4)
+* Fix disappearing comment preferences in certain ciscumstances (see faq for 4.0.4)
+* Fix "active class" in section_list, category_list
+* Better cooperation with some proxies (and other HTTP/1.0 clients)
+* Smarter comment submit button emphasises preview step
+* Optionally hide spam comments in back end list
+* Truncate longish article category titles in the write screen
+* Handle thumbnailing of larger images
+* Better MoveableType import
+* Fix some more IIS issues
+* New callback event: 'textpattern_end'
+* New callback event: 'ping'
+* New tag: <txp:article_url_title />
+* Changed tag: <txp:permlink /> loses default title attribute
+* Changed tag: <txp:file_download_link /> returns filename as an additional URL part
+* Many, many minor improvements, see:
+  http://dev.textpattern.com/log/development/4.0/?action=stop_on_copy&rev=2443&stop_rev=1963
+
+Changes in 4.0.4:
+
+* RSS 2.0 support
+* RSS and Atom feed fixes and improvements
+* Many improvements to admin interface XHTML markup and CSS
+* Many subtle improvements to the admin UI
+* Add automatical detection of and working with SSL
+* add nowidow-attribute to article tags
+* Adapt navigation-elemts to the user's permissions
+* Lots of textile improvements
+* Fixed sending Last-Modified header
+* Better indexing for faster article list queries
+* Update to tagbuilders
+* Show (source of) plugin-help before installation
+* Improvements in translations (and translateables) (thanks Skubidu and others)
+* New translations: Indonesian, Hebrew, Hungarian, Romanian
+* Improved handling of comma-separated values in tag attributes
+* article, article_custom tags: new 'sort' attribute
+* New conditional if_article_id
+* author, category, category1, category2 tags: can link to any section by name
+* Improved xhtml attributes on many tags (class, rel)
+* time and date tags: new attributes for overriding language, GMT
+* css, feed_link tags: easier generation of xhtml 'link' tags
+* New link tags: link_category, link_date, link_name, link_url
+* Navigation tag improvements (new attributes, improved xhtml output)
+* Warn if article or comment tags are used in the wrong context
+* Improved error checking, reporting and diagnostics
+* Stricter 404 checking (missing category, author, messy article ID)
+* Simplify and improve comment preview and input form tags
+* Improved article load/parse logic on individual article pages
+* Workaround some rare FCGI problems with HTTP headers
+* Fix some IIS clean URL issues
+* Improved multi-edit support on admin pages
+* Deprecate old-style PHP tags
+* Don't lose your place in admin lists when returning from an edit
+* Extra diagnostic info and pre-flight tests
+* Better time zone handling
+* Remember and automatically reuse thumbnail size settings
+* Textile: fix inline class/style/lang
+* Warn when article and comment tags are used in the wrong place
+* New "if_plugin" conditional checks for an active plugin, with optional version number
+* Fix an occasional time zone bug
+* Fix 404 errors on clean category URLs
+* Add backtrace list to error messages in Debug mode
+* Add limit attribute to search_result_excerpt tag
+* Add escape and default attributes to custom_field tag
+* fix image-upload for outdated gdlib-installations (wet)
+* fix label attribute breadcrumb function (richard)
+* add if_author, if_article_author (with attribute 'name') (mary)
+* allow multiple sections for if_article_section (like for if_section, if_category) (mary)
+* display link category's title, rather than name, in the links page. (mary)
+* extend article_image tag to optionally display the article image thumbnail. (mary)
+* Many minor bugfixes
+
+Changes in 4.0.3:
+
+* fixed 2 potential security holes(detected in internal code review).
+  Updade is recommended.
+* Textile i18n improvements
+* Add a bulk Ban function for comments
+* Automatically hide comments when banning an IP
+* Fix comments "page by"
+* Fix double translated linebreaks in comments.
+* Fix nofollow in comments
+* Fix preview without textile in certain edge cases
+* Seperate hidden comments into unmoderated and spam
+* Add bulk changing of comment status (visible, moderated, spam)
+* Better error-handling in comments-form when critical fields are missing
+  New tag: <txp:comments_error /> (and conditional <txp:if_comments_error >)
+  Style-able error-message and form-elements via CSS (class=comments_warn).
+* Plugin-Authors: Add callbacks for future spam-plugins [comment.save, comment.form]
+* Plugin-Authors: Add getComment() and comment_evaluator for future spam-plugins
+* Plugin-Authors: Allow (optionally, transparently) for installing compressed plugins.
+* Plugin-Authors: Add window events using addEvent, to allow multiple events loading
+                  at window.onload, useful for admin side plugins.
+* Improve mysql5-compatibility
+* Add comment edit link to notification emails
+* Make comment-time format customizable in tag (mary)
+* Add offset-attribute to file_download_list (mary)
+* Make older, newer and link_to_home work more consistantly with other nav-tags (mary)
+* Fix mailto: links
+* Fix tag trace output for enclosing tags
+* Update comment_count after import
+* Add extra info to the tag trace (SQL queries, conditional tag results, page template and form names)
+
+Changes in 4.0.2:
+
+* Fix a bug in 404 handling on some fastcgi servers
+* Fix a bug that prevented file_download_list from working properly
+* Fix a redirection bug in the comment form
+* Fix occasional category URL i18n problems
+* Remove extra trailing slash in some breadcrumb links
+* Make articles by author work properly
+* Make feed_link support section and category correctly
+* Add correct content-type to popup comments page
+* Fix an obscure feed caching bug
+* Fix a possible problem with circular dependencies when loading plugins
+* Fix timestamps in Atom feeds
+* Fix occasional Atom encoding issues
+* UI improvements when creating/copying/deleting styles
+* Improve performance of the language loader
+* Make date-based permlinks work properly in comment emails
+* Better handling of invalid login cookies
+* Use page templates for 404 (and other) error pages
+* Minor Atom validation improvements
+* Improved comment conditionals logic; txp:if_comments now means "if the current article has at least 1 comment"
+* Minor performance improvements
+* New txp:if_status and txp:page_url tags
+* Prevent config.php whitespace from breaking stylesheets
+* UI improvements to javascript toggles
+* Improved comment input form HTML markup
+* Improved txp:section and txp:category tags
+* New tags: txp:if_different, txp:if_first_article, txp:if_last_article
+* Localize the XML feed link title
+* Better encoding of article titles
+* Fix rare problems caused by magic_quotes_runtime
+* Improved file upload forms
+* New language: Latvian
+* Support section and category titles in txp:breadcrumb
+* Allow decimals=0 in txp:file_download_size tag
+* Minor diagnostic info changes
+* New labeltag attribute on most list tags
+* Restore use_textile preference
+* Minor HTML validation fixes
+* Developers: new safe_upsert() database function
+* Fall back to English if no language data is available
+* Support comma-separated names in txp:if_category and txp:if_section
+* Identify the offending tag when displaying error messages in templates and forms
+* Add include_default attribute to txp:section_list
+* Add support for changing status and section on multiple articles at once
+* Fix nested category titles in txp:breadcrumb
+* Improved comment message markup
+* Restore the comments_closed message
+* Better handling of per-article Use Textile selection
+* Add class attribute to comments_invite for css-classes
+* Added 4 attributes to comments_invite: showcount, wraptag, textonly (just the invite-text)
+    and showalways (also display on individual article-pages). Example:
+    <comments_invite wraptag="p" showcount="0" textonly="1" showalways="1" />
+* Support c-style backslash sequences in tag attributes
+* Fix some rare bugs in feeds, admin list paging
+* Add a pageby attribute to txp:article, for multi-column lists
+* Fix txp:link_to_next/prev so they work at the top of a page
+* Minor speed improvements, new class and linkclass attributes for txp:breadcrumb tag
+* Added txp:comments_preview and txp:if_comments_preview tags. Example usage:
+	<txp:if_comments_preview>
+	 <div id="cpreview" style="background-color:#FF0"><b>Hello, the following is your preview</b>
+	   <txp:comments_preview /><txp:comments_form preview="1" />
+	 </div>
+	</txp:if_comments_preview>
+* Fixed unparsed excerpts in Feeds.
+* Textile: smarter handling of relative link and image paths
+* Textile: stop footnote links from clashing in article lists
+* Add fi_FI locale support
+
+Changes in 4.0.1:
+
+* fixed some serious security issues. Updates are strongly recommended.
+* fixed textile problems (missing block-elements in some cases; notextile; span-handling)
+* fixed updating of comment_count when deleting comments
+* fixed bug in atom feeds (multiple identical excerpts)
+* added new permission level (article.edit.own.published, allows you to edit own articles _after_ publishing)
+* added very basic 404 support (correct 404 Headers are sent)
+* added new languages (?slenska, Suomi, ..(..), ..(..))
+* fixed bugs in articles by author (clean and messy urls)
+* fixed category_list to use clean urls when appropriate
+* fixed installation problems with certain db prefixes by limiting possible prefixes
+* fixed timezone issue with ymd permlinks
+* fixed GMT formatting of dates
+* fixed bugs with i18n-ascii.txt and added a few new items
+* added language overrides to dirifying url_titles
+* several improvements to url_titles (including not updating them until published)
+* several improvements to diagnostics
+* added style and class attributes to txp:permlink
+* fixed bugs with multibyte strings in some urls
+* added contextual information to page title on the admin side
+* fixed problems with larger file downloads
+* fixed file_download_link with multiple files
+* fixed logging of file downloads (only finished downloads are counted; aborts go to normal logs)
+* fixed problems with sending mail on some systems
+* improvements to older/newer tags
+* developers: added more consistent url generation via new pagelinkurl() function
+* developers: added callbacks to public side (for example to handle 404s)
+if_article_id

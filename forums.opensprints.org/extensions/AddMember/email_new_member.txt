@@ -1,0 +1,17 @@
+Hello {first_name},
+
+This message is to inform you that an account at {forum_name} has been created for you.
+
+You can sign-in at:
+{forum_url}
+
+Your sign-in details are:
+
+Username: {user_name}
+Password: {user_password}
+
+Please view our Terms of Service before signing in:
+{terms_of_service}
+
+{my_first_name} {my_last_name}
+

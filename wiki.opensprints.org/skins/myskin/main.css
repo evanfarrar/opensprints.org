@@ -1,0 +1,86 @@
+/* this file must be empty */
+/* Drone */
+/* a wikipedia skin by Chochem */
+/* version 0.2 */
+
+
+/* STRUCTURE */
+
+body {
+  background: none;
+  font-family: Droid Sans,Sans-Serif;
+  font-size: 14px;
+  line-height: 1.4;
+  }
+
+#globalWrapper {
+  position: relative;
+  width: 840px; 
+  margin: 0 auto;
+  }
+
+
+#column-content {
+  position: relative; 
+  padding-top: 100px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkCAIAAADITs03AAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9gKAgokHU157GEAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAAFElEQVQY02M4Y2zMxMDAMIoHBwYAeLMB+Y7y0c8AAAAASUVORK5CYII%3D) repeat-x;
+  float: right;
+  text-align: justify;
+/*  width: 584px; */
+  width: 675px; 
+  }
+
+#column-one {
+  position: relative !important;
+  padding-top: 100px;
+  float: left;
+  width: 150px;
+  font-size: 12px;
+  }
+
+
+/* FOOTER */
+#footer {
+  margin: 50px 0;
+  float: right;
+  clear: both;
+  width: 575px;
+  }
+
+#footer > *:not(#f-list),
+#globalWrapper #footer #f-list #copyright
+  {display: none !important;}
+
+#f-list {
+  position: relative;
+  padding: 0;
+  list-style: none;
+  }
+#f-list li:not(#lastmod) {
+  display: inline;
+  margin-right: 2em;
+  }
+
+
+/* COLUMN-ONE */
+
+/* collapsing menus */
+.portlet .pBody {display: none !important;}
+.portlet:hover .pBody {display: block !important;}
+#p-cactions.portlet .pBody {display: block !important;}
+
+/* reduce languages */
+#p-lang li:not(.interwiki-da):not(.interwiki-de):not(.interwiki-es):not(.interwiki-fr):not(.interwiki-it) {display: none !important;}
+
+/* logo substitution */
+#p-logo {
+  position: absolute;
+  top: 0; left: 0;
+  }
+
+#p-logo a {
+  background: #cc3333 no-repeat center url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAeCAYAAADaW7vzAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9gKAgsFBz1Gas8AAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAADwklEQVRo3u2YXYhVVRTH/3vGr8map1ChJrIpQSKVBJGM6EHBogcfMqQ3CUnQfIgUhERHTe2DMgIfQundosYPSgWjMSvBEUvM0ZhxZDBwRpn81mnUXy/rwOJ09O4zzc3J9h8ud5//WWvf9bHPWutcKSEhISEhISEhISEh4R4CEIBvgevAm47P0DwQ/X/Zh52ZsUPFpn/izFgX/B8HkJBC/buckKraVFNlf3ok7ZXUJ2nrXdAfij4NyScn6gkZIrZu909ItVETYVCDC+Baxy9z/HLHr3D8w2WCD6x38qtvlzzHzQHmAx1AH3AQeK5g30bgC+AP4CrQAjxbIPcM8JP1h9PAUknnYg8U8CqwB+gF+oFOYBUwbLBPyTEzYK/jdgA3jd/p+F3GHY0IqOc+cnxTBdkMR/k7rgETnew4oNvu3bCEYAl82sk9AVwp2O9M/gm5Q0J2U4x1g52QLFiXgFqbNHqBw3YKeo2rAc6b7AcRAf3c9DY5bmWl05hz9m1gEtDkuM1O9kOXjClAPdCe/b6T+9Tpv2t7LjK92IRMB+YBDwBjgFMmd3qwEzLbGTEZeMrWWyyoAE+aExlmRQR0M7DBXa+IKQ+OO5aTPWl8h+PajGt13Ebjuh2XJakLCLlKEJWQAtu3mdzN2FjH1rYWSdcljZI0XVKt8Ycl1Ul6WdIM15OuStoXse/zkhpt3S5pfcmz0pG7Pi5pvKSHHPeofU8taMwPunWDff8aQvBybZJeiji0wyUtkTTXfKqXNKLsNBuVkBDCNWC/pJmSJku63261Shpp62mSspPQEkLoi9i6UdItM/hxSRslLS6RkNq8qVl8Crjzkk7EFITc9a1IWz6R9LqtD9lnpqTHqjX+vZU1dqDVJpGRwGibKA4A+01mSWTJ6bQS+JnjFpQoWe25t/qsZv/m+OPG/VzBv6zcdeb4L2NKFnDBuENZyQO+qdrI7PpGl/349+5eK3AO6DGZCZEBbbbrUbZHNv3MKNHU11rvWuO4TU52neOXAfcBw+wgbHByW/xUZP4usMMWk5BsejsC1FmDv1LVdxjgd2fMO47/2PEnS5xwzz0CnHWjZkOE/oWCEfMy0Ohk628zHueDPNFG5jx+iUzI1wW6B8smpOxfJ3vc2jftH9x690CSHULokvSK9aGxkpqBugpq2yStlNQt6U9JByTNCiF0uH0v2sDxvg0B/SZ7QtJ7Tq5N0os2qPRLOiXpNUlvRLqwUNJ3ptsjqUnSC5Ju/B/+Rc7w1b3mW81/3P6QEpKQEpKQkJCQkJBQGX8Bv7HSMT72oxgAAAAASUVORK5CYII%3D) !important;
+  display:block;
+  height:100px;
+  width:150px;
+  }

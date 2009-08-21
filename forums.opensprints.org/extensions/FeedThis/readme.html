@@ -1,0 +1,41 @@
+===================================
+EXTENSION INSTALLATION INSTRUCTIONS
+===================================
+
+In order for Vanilla to recognize an extension, it must be contained within its
+own directory within the extensions directory. So, once you have downloaded and
+unzipped the extension files, you can then place the folder containing the
+default.php file into your installation of Vanilla. The path to your extension's
+default.php file should look like this:
+
+/path/to/vanilla/extensions/FeedThis/default.php
+
+Once this is complete, you can enable the extension through the "Manage
+Extensions" form on the settings tab in Vanilla.
+
+===================================
+
+This is a forked version of the "Feed Publisher" extension. This involves no messy configuration files, but instead there are a number preset feeds that can be configured from the settings panel. I have forked this because some people want the extra power of configuration files, and didn't feel they worked hand in hand particularly well.
+
+There are a small number of finetune options in finetune.php should you wish to attach stylesheets to your feeds, add support for Simple Cache, turn off either RSS2 or ATOM feeds, or have custom URLS for FeedBurner support.
+
+This is currently working on my sites, spodesabode.com and thinkabouttech.com, and because it is in use, I intend on maintaining the code. Please get in touch with me if you find any bugs or have feature requests. 
+
+*Features*
+
+ - Supports RSS2 and ATOM Feeds
+ - Supports authentication for private forums.
+ - Feeds "All Discussions", "Per Discussion", "Per Category", "Blog", "Per User Blog", "Per User Comments", "Search Results".
+ - Supports word count limit in feed.
+ - Supports persistent "All Discussions" feed on all pages.
+ - Supports persistent "Blog" feed on all pages.
+ - Supports BlogThis and TagThis
+ - Supports Publishing FeedBurner URLs
+
+===================================
+
+CHANGELOG
+
+v1.02 - Fixed an issue with URLs in feeds not having the friendly title in. Added support for custom FeedBurner URLs.
+v1.01 - Fixed error with version number. Fixed issue with private forum authentication. Fixed order of feeds. Fixed issue were those without BlogThis permissions were getting blog feeds. Fixed issue with blog feeds inside discussions getting the wrong URLs. 
+v1.00 - Initial Forked Release

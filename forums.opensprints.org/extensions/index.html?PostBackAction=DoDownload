@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-ca">
+   <head>
+      <title>Vanilla Add-ons - Download</title>
+      <base href="http://lussumo.com/addons/" />
+      <link rel="shortcut icon" href="/favicon.ico" />
+            <link rel="stylesheet" type="text/css" href="http://lussumo.com/addons/themes/addons/styles/default/addons.css" media="screen" />
+            <link rel="stylesheet" type="text/css" href="/addons/extensions/LussumoBanner/style.css" />
+            <script type="text/javascript" src="/addons/./js/addon.js"></script>
+            <script type="text/javascript" src="/addons/./js/global.js"></script>
+            <script type="text/javascript" src="/addons/extensions/HideSuccess/functions.js"></script>
+      <script type="text/javascript">
+         // Initialize hide effects
+         var EffectTimer;
+         var Height = 32;
+         setTimeout("ExecuteEffect('Success', 'HideEffect', 9);", 2000);
+      </script>
+      </head>
+   <body><div class="BannerContainer">
+            <div class="Banner">
+               <a class="BannerLogo" href="http://lussumo.com">&nbsp;</a>
+               <div class="BannerMenu">
+                  <a href="http://lussumo.com/swell">Swell Blog</a>
+                  | <a href="http://lussumo.com/docs">Documentation</a>
+                  | <a href="http://lussumo.com/community">Community</a>
+                  | <a href="http://getvanilla.com">Get Vanilla</a>
+                  | <strong><a href="http://lussumo.com/addons">Vanilla Add-ons</a></strong>
+               </div>
+            </div>
+         </div><div id="SiteContainer">
+   <div id="Content">
+      <div id="Menu">
+         <h1><a href="./">Vanilla Add-ons</a></h1>
+         <div id="HeadSearch">
+            <fieldset>
+               <form method="get" action="index.php">
+               <input type="hidden" name="PostBackAction" value="Search" />
+               <input type="text" name="Keywords" value="" class="SearchInput" />
+               <input type="submit" value="Search" class="Button" />
+               </form>
+            </fieldset>
+         </div>
+         <div id="Session">Not signed in (<a href="http://lussumo.com/community/people/?ReturnUrl=http%3A%2F%2Flussumo.com%2Faddons%2F%3FPostBackAction%3DDoDownload">Sign In</a>)</div><span>
+               <a href="index.php?PostBackAction=Search">Show All</a>
+               | <a href="index.php?PostBackAction=Search&amp;Type=Extensions">Extensions</a>
+               | <a href="index.php?PostBackAction=Search&amp;Type=Themes">Themes</a>
+               | <a href="index.php?PostBackAction=Search&amp;Type=Styles">Styles</a>
+               | <a href="index.php?PostBackAction=Search&amp;Type=Languages">Languages</a></span></div>
+      <div id="Body"><br />
+<b>Notice</b>:  Trying to get property of non-object in <b>/applications/lussumo/add-ons/themes/download.php</b> on line <b>3</b><br />
+<br />
+<b>Notice</b>:  Trying to get property of non-object in <b>/applications/lussumo/add-ons/themes/download.php</b> on line <b>3</b><br />
+<br />
+<b>Notice</b>:  Trying to get property of non-object in <b>/applications/lussumo/add-ons/themes/download.php</b> on line <b>7</b><br />
+<div id="DownloadPage">
+   <h1>Downloading:  </h1>
+   <br />
+   <div class="Column">
+      <h3>Your download should begin shortly</h3>
+      <p>If your download does not begin right away, <a href="?PostBackAction=DoDownload&AddOnID=">Click here to download now</a>.</p>
+      
+      <h3>How to install this add-on?</h3>
+      <p>There should be a readme file in the add-on with more specific instructions on how to install. If there is not, you can attempt to install using the <a href="http://lussumo.com/docs/doku.php?id=vanilla:addons#sample_readme_contents">generic install instructions from Lussumo</a> or you can ask for help on the <a href="http://lussumo.com/community/">Community Forum</a>.</p>
+   </div>
+   <div class="Column RightColumn">
+      <h3>Please Note</h3>
+      <p>Lussumo does not sell, resell, or license any of the add-ons listed on the site. We cannot be held liable for issues that arise from the download or use of these add-ons.</p>
+      
+      <h3>Now what?</h3>
+      <p>Of course you <a href="?PostBackAction=Search">search for more add-ons</a>, or you can <a href="?PostBackAction=DevelopYourOwn">learn how to make your own</a>.</p>
+   </div>
+</div></div>
+   </div>
+</div></body>
+</html>

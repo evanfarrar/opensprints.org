@@ -1,0 +1,10 @@
+<h3 id="respond">Leave A Reply</h3>
+<txp:comments_error />
+
+<p><txp:comment_name_input /> <label for="name"><txp:text item="Name (required)" /></label></p>
+<p><txp:comment_email_input /> <label for="email"><txp:text item="Mail (not published) (required)" /></label></p>
+<p><txp:comment_web_input /><label for="web">Website</label></p>
+<p id="checkbox"><txp:comment_remember /></p>
+<p><txp:comments_help /></p> 
+<p><txp:comment_message_input /></p>
+<p><txp:comment_preview /> <txp:comment_submit /></p>

@@ -1,0 +1,5 @@
+<div class="<txp:ajw_comment_alt />">
+<cite><txp:comment_name /></cite> Says:<br />
+<small class="commentmetadata"><txp:comment_permlink> <txp:comment_time /></txp:comment_permlink></small>
+<txp:comment_message />
+</div>

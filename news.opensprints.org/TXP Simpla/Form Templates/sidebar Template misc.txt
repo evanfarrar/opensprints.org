@@ -1,0 +1,25 @@
+<div id="sidebar">
+
+<h2>Sections</h2>
+<ul>
+<li><a href="<txp:site_url />">Home</a></li>
+<li><a href="<txp:site_url />about">About</a></li>
+</ul>
+
+<h2>Categories</h2>
+<ul>
+<txp:category_list break="li" />
+</ul>
+
+<h2>Archives</h2>
+<ul>
+<li><a href="<txp:site_url /><txp:section />/#">By Category (Dummy Link)</a></li>
+<li><a href="<txp:site_url /><txp:section />/#">By Month (Dummy Link)</a></li>
+</ul>
+
+<h2>Links Out</h2>
+<ul>
+<txp:linklist form="Links" />
+</ul>
+
+</div>

@@ -1,0 +1,34 @@
+.CommentBody blockquote
+{
+   padding:8px 16px;
+   margin:0 0 8px;
+   
+   background-color: #E5EAF6;
+   border-left: 6px solid #ACBEDF;
+   
+   color:#56568F;
+}
+
+.CommentBody blockquote blockquote
+{
+   border-right:  1px solid #ACBEDF;
+   border-top:    1px solid #ACBEDF;
+   border-bottom: 1px solid #ACBEDF;
+}
+
+.CommentBody blockquote cite
+{
+   font-weight:bold;
+   display:block;
+   margin-bottom:8px;
+   padding-bottom:8px;
+   border-bottom:1px solid #ACBEDF;
+   color:#56568F;
+}
+
+.CommentQuote
+{
+   display:inline;
+   font-size:10px;
+   color:#ccc;
+}

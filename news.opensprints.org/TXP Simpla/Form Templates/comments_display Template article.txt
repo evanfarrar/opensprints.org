@@ -1,0 +1,17 @@
+<div class="commentsblock">
+<txp:if_comments_preview>
+<txp:comments_preview form="comments_preview" />
+<txp:comments_form />
+<txp:else />
+
+<txp:if_comments>
+<h3 id="comment"><txp:comments_count /> Responses to "<txp:title />"</h3>
+</txp:if_comments>
+
+<txp:comments />
+
+<txp:if_comments_allowed>
+<txp:comments_form />
+</txp:if_comments_allowed>
+</txp:if_comments_preview>
+</div>

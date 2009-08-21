@@ -1,0 +1,30 @@
+<?php
+$Context->SetDefinition("Feeds", "Feeds");
+$Context->SetDefinition("RSS2Feed", "RSS2");
+$Context->SetDefinition("ATOMFeed", "ATOM");
+$Context->SetDefinition("FailedFeedAuthenticationTitle", "Failed Authentication");
+$Context->SetDefinition("FailedFeedAuthenticationText", "Feeds for this forum require user authentication.");
+$Context->SetDefinition('AllDiscussionsFeed', "All Discussions Feed");
+$Context->SetDefinition('DiscussionFeed', "Discussion Feed");
+$Context->SetDefinition('BlogFeed', "Blog Feed");
+$Context->SetDefinition('UserBlogFeed', "User's Blog Feed");
+$Context->SetDefinition('UserCommentsFeed', "User's Comments Feed");
+$Context->SetDefinition('SearchFeed', "Search Results Feed");
+$Context->SetDefinition('CategoryFeed', "Category Feed");
+$Context->SetDefinition('SubscribeFeed', "Subscribe to this feed...");
+$Context->SetDefinition('FTSettings', "FeedThis Settings");
+$Context->SetDefinition('FeedSettings', "Feeds to Display");
+$Context->SetDefinition('BlogFeedSetting', "Blog Feed (Requires BlogThis Extension)");
+$Context->SetDefinition('BlogFeedEverySetting', "Display Blog Feed on EVERY Page.");
+$Context->SetDefinition('AllDiscussionsFeedSetting', "All Discussions Feed");
+$Context->SetDefinition('AllDiscussionsFeedEverySetting', "Display All Discussion Feed on EVERY Page.");
+$Context->SetDefinition('DiscussionFeedSetting', "Individual Discussion Feed");
+$Context->SetDefinition('CategoryFeedSetting', "Individual Category Feed");
+$Context->SetDefinition('SearchResultsFeedSetting', "Search Results Feed");
+$Context->SetDefinition('UserBlogFeedSetting', "User's Blog Posts Feed (Requires BlogThis Extension)");
+$Context->SetDefinition('UserCommentsFeedSetting', "User's Comments Feed");
+$Context->SetDefinition('FeedExtraSettings', "Extra Settings");
+$Context->SetDefinition('FeedPanelPosition', "Position in Panel (1-200)");
+$Context->SetDefinition('FeedItems', "Number of items to display in feed");
+$Context->SetDefinition('WordLimit', "Number of words to display per post (0 for all)");
+?>
