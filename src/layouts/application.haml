@@ -25,16 +25,19 @@
         %img{:src => "images/board.jpg"}
       .intro.span-14
         .p{:style => "font-size: 27px"}
-          OpenSprints is a system of open source hardware, software and instructions for building and running GoldSprints, a style of racing stationary bikes.
+          =yield
         #amanda
         .go
           %h1 Learn More:
-          .span-4
+          .span-3
             %a{:href => "/news"}
               %h3 News
           .span-4
             %a{:href => "http://wiki.opensprints.org"}
               %h3 Documentation 
-          .span-4
+          .span-3
             %a{:href => "http://opensprints.org/forum"}
               %h3 Support
+          .span-3
+            %a{:href => "buy.html"}
+              %h3 Buy
