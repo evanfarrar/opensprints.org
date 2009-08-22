@@ -1,0 +1,13 @@
+<% content_for :head do %>
+	<%= stylesheet_link_tag '/javascripts/jsTree/source/tree_component.css' %>
+	<%= javascript_include_tag 'jsTree/source/_lib.js' %>
+	<%= javascript_include_tag 'jsTree/source/tree_component.js' %>
+ 
+  <%= javascript_tag "var taxonomy_id = #{@taxonomy.id}; 
+    var loading = '#{t('loading')}'; 
+    var new_taxon = '#{t('new_taxon')}';
+    var server_error = '#{t('server_error')}';
+    var taxonomy_tree_error = '#{t('taxonomy_tree_error')}';" 
+  %> 
+  <%= javascript_include_tag 'taxonomy' %>
+<% end %>

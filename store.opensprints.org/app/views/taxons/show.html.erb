@@ -1,0 +1,12 @@
+<h1><%= @taxon.name %></h1>
+
+<% if @taxon.children.empty? %>
+  <%= render :partial => "shared/products.html.erb", :locals => {:products => @products, :taxon => @taxon } %>
+  <%= will_paginate @products, :prev => "&#171; #{t('previous')}", :next => "#{t('next')} &#187;" %> 
+<% else %>
+  <%= render :partial => "taxon", :collection => @taxon.children %>
+<% end %>
+
+<% content_for :sidebar do %>
+	<%= render :partial => "shared/taxonomies" %>
+<% end %>

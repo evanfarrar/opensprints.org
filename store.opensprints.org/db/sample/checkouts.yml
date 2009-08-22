@@ -1,0 +1,8 @@
+<% 1.upto(30) do |i| %>
+checkout_<%= i %>:
+  bill_address: frank_bill_address_<%= i %>
+  email: frank.foo@example.com 
+  order: order_<%= i %>
+  completed_at: <%=Time.now%>
+  ip_address: 127.0.0.1
+<% end %>

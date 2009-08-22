@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<%= render :partial => 'shared/head'%>
+</head>
+<%
+if @body_class.nil?
+  if @content_for_sidebar
+    @body_class = 'two-col'
+  else
+    @body_class = 'one-col'
+  end
+end
+ %>
+<body class="<%= @body_class %>"<%= %( id="#{@body_id}") if @body_id %>>
+  <div id="header" class="container"> 
+	<%# logo %>
+  </div>
+  <div id="wrapper" class="container"> 
+    <% if @content_for_sidebar %>
+    <div id="sidebar">
+      <h2>Sections</h2>
+      <ul>
+        <li><a href="http://opensprints.org/news/">News</a></li>
+        <li><a href="http://opensprints.org/forum">Support</a></li>
+        <li><a href="http://wiki.opensprints.org">Documentation</a></li>
+        <li><a href="http://github.com/evanfarrar/opensprints">Development</a></li>
+        <li><a href="http://www.flickr.com/photos/tags/opensprints/">Photos</a></li>
+      </ul>
+      <%= yield :sidebar %>
+    </div>
+    <% end %>
+    
+    <div id="content">
+      <div class="clearfix">
+      <ul id="nav-bar">
+        <div id="login-bar">
+          <%= render 'shared/login_bar' %>
+        </div>
+        <% if store_menu? %>
+          <%= render 'shared/store_menu' %>
+        <% end %>
+      </ul>
+      </div>
+      <%= breadcrumbs(@taxon) if @taxon %>
+      <% if flash[:notice] %>
+      <div class="flash notice"><%= flash[:notice] %></div>
+      <% end %>
+      <% if flash[:error] %>
+      <div class="flash errors"><%= flash[:error] %></div>
+      <% end %>
+      <%= yield %>
+    </div>
+    <%= render :partial => 'shared/footer'%>
+  </div>
+</body>
+</html>

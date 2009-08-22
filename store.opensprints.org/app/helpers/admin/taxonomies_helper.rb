@@ -1,0 +1,3 @@
+module Admin::TaxonomiesHelper
+
+end
