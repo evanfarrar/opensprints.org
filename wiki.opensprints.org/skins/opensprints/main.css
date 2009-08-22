@@ -461,9 +461,10 @@ a:hover {
 
 #column-content {
   float: left;
-  width: 40em;
+  width: 50.5em;
   font-size:1.1em;
   padding-top:2em;
+  background-color: white;
 }
 
 
@@ -484,4 +485,6 @@ a:hover {
 #globalWrapper {
   width: 76em;
   margin: 0 auto;
+  padding-top: 131px;
+  background:transparent url(http://opensprints.org/news/images/logo_picture.jpg) no-repeat scroll 0 -520px;
 }

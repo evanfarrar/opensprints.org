@@ -68,7 +68,7 @@ a:hover {
 }
 #Session {
   position:absolute;
-  top:80px;
+  top:140px;
   text-align:right;
   font-size:11px;
   color:#5d709f;
@@ -81,10 +81,9 @@ a:hover {
   color:#000;
 }
 #Header {
-  background:url(/images/logo.png) no-repeat -5px 10px #E5EAF6;
+  background:url(http://opensprints.org/news/images/logo_picture.jpg) no-repeat 0px -521px transparent;
   border-top:1px solid #acbedf;
   border-bottom:1px solid #acbedf;
-  padding-top: 10px
 }
 #Header * {
   margin:0;
@@ -101,6 +100,8 @@ a:hover {
 }
 #Header ul {
   text-align:center;
+  padding-top: 121px;
+
 }
 #Header ul li {
   display:inline;
@@ -1440,3 +1441,6 @@ a:hover {
  text-decoration: underline;
 }
 
+#Header h1 {
+  display: none;
+}
