@@ -1,0 +1,22 @@
+# Logfile created on Sat Aug 22 11:53:19 -0500 2009
+
+Processing ProductsController#index (for 127.0.0.1 at 2009-08-22 11:59:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"products"}
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: taxonomies: SELECT * FROM "taxonomies"):
+  searchlogic (1.6.6) lib/searchlogic/active_record/base.rb:23:in `find'
+  spree (0.8.5) app/controllers/application.rb:92:in `instantiate_controller_and_action_names'
+  /usr/lib/ruby/gems/1.8/gems/haml-edge-2.1.3/lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2009-08-22 12:00:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"products"}
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: taxonomies: SELECT * FROM "taxonomies"):
+  searchlogic (1.6.6) lib/searchlogic/active_record/base.rb:23:in `find'
+  spree (0.8.5) app/controllers/application.rb:92:in `instantiate_controller_and_action_names'
+  /usr/lib/ruby/gems/1.8/gems/haml-edge-2.1.3/lib/sass/plugin/rails.rb:19:in `process'
+
+Rendering rescues/layout (internal_server_error)
