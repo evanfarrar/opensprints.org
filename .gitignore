@@ -1,2 +1,3 @@
 store.opensprints.org/log/*
 store.opensprints.org/tmp/**/*
+**/*.swp
