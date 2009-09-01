@@ -2,23 +2,23 @@
 
 development:
   adapter: mysql
-  database: CHANGEME_development
+  database: opensprints_stats_development
   username: root
-  password: 
+  password: password
   host: localhost
   encoding: utf8
   
 test: &TEST
   adapter: mysql
-  database: CHANGEME_test
+  database: opensprints_stats_test
   username: root
-  password: 
+  password: password
   host: localhost
   encoding: utf8
   
 staging:
   adapter: mysql
-  database: CHANGEME_staging
+  database: opensprints_stats_staging
   username: CHANGEME
   password: <%= File.read(PASSWORD_FILE).chomp if File.readable? PASSWORD_FILE %>
   host: localhost
@@ -27,7 +27,7 @@ staging:
   
 production:
   adapter: mysql
-  database: CHANGEME_production
+  database: opensprints_stats_production
   username: CHANGEME
   password: <%= File.read(PASSWORD_FILE).chomp if File.readable? PASSWORD_FILE %>
   host: localhost
