@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :config_files
+
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   map.resources :products
