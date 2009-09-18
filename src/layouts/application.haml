@@ -3,6 +3,7 @@
 %html
   %head
     /= blueprintcss(:compressed => false)
+    %link{:rel => "stylesheet", :href => "stylesheets/screen.css", :type => "text/css", :media => "screen, print"}
     = stylesheets
     %meta{:"http-equiv" => "content-type", :content => "text/html; charset=utf-8"}
     %meta{:name => "description", :content => "OpenSprints - Bringing GoldSprints to the Masses"}
@@ -13,31 +14,29 @@
     %link{:href => "/news/?atom=1", :title => "Atom 1.0", :type => "application/atom+xml", :rel => "alternate"}
 
     %title opensprints.org - Bringing GoldSprints to the Masses
-    %link{:rel => "stylesheet", :href => "stylesheets/screen.css", :type => "text/css", :media => "screen, print"}
   %body
     .top.container
       .span-2
       .span-20.header.middle
-        %h1 OpenSprints
       .span-2.last
     .container
-      .span-8.append-1
-        %img{:src => "images/board.jpg"}
+      .span-5.append-1.menu
+        %ul
+          %li
+            %a{:href => "/about.html"} ABOUT
+          %li
+            %a{:href => "/news"} NEWS
+          %li
+            %a{:href => "http://wiki.opensprints.org"} DOCUMENTATION
+          %li
+            %a{:href => "http://forum.opensprints.org"} SUPPORT &amp; DISCUSSION
+          %li
+            %a{:href => "/downloads.html"} DOWNLOADS
+          %li
+            %a{:href => "http://store.opensprints.org"} PRODUCTS
+          %li.louder
+            %a{:href => "/contact.html"} CONTACT
+        %img{:src => "images/bw_logo_with_text.png"}
       .intro.span-14
-        .p{:style => "font-size: 27px"}
+        .p{:style => "font-size: 24px"}
           =yield
-        #amanda
-        .go
-          %h1 Learn More:
-          .span-3
-            %a{:href => "/news"}
-              %h3 News
-          .span-4
-            %a{:href => "http://wiki.opensprints.org"}
-              %h3 Documentation 
-          .span-3
-            %a{:href => "http://opensprints.org/forum"}
-              %h3 Support
-          .span-3
-            %a{:href => "buy.html"}
-              %h3 Buy
