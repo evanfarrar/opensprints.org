@@ -1,8 +1,8 @@
-- @layout = "index"
 .span-5.append-1.menu
+  .header
   %ul
     %li
-      %a{:href => "/about.html"} ABOUT
+      %a{:href => '/about.html'} ABOUT
     %li
       %a{:href => "http://opensprints.org/news"} NEWS
     %li
@@ -15,13 +15,21 @@
       //%a{:href => "http://store.opensprints.org"} PRODUCTS
       %a{:href => "/contact.html"} PRODUCTS
     %li.louder
-      %a{:href => "/contact.html"} CONTACT
+      %span CONTACT
   %img{:src => "images/bw_logo_with_text.png"}
 .intro.span-14
-  %h2.louder
-    The revolutions will be digitized
-  %h2 OpenSprints is a system of open source hardware, software and instructions for building and running GoldSprints, a style of racing stationary bikes.
-  #slideshow
-    %img{:src => "images/homepage_image1.png"}
-    %img{:src => "images/homepage_image2.png"}
-    %img{:src => "images/homepage_image3.png"}
+  .header_clear
+  .louder EMAIL
+  %hr
+  %p info@opensprints.org
+  .louder MAIN TELEPHONE
+  %hr
+  %p 801 784 8566 
+  .louder FAX
+  %hr
+  %p 801 606 7568
+  .louder MAILING ADDRESS
+  %hr
+  %p 
+    %div 1220 Lyman Ct.
+    %div Salt Lake City, UT, 84105-1821
