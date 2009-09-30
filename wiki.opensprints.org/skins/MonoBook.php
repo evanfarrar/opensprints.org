@@ -110,8 +110,36 @@ class MonoBookTemplate extends QuickTemplate {
 <body<?php if($this->data['body_ondblclick']) { ?> ondblclick="<?php $this->text('body_ondblclick') ?>"<?php } ?>
 <?php if($this->data['body_onload']) { ?> onload="<?php $this->text('body_onload') ?>"<?php } ?>
  class="mediawiki <?php $this->text('dir') ?> <?php $this->text('pageclass') ?> <?php $this->text('skinnameclass') ?>">
-	<div id="globalWrapper">
-		<div id="column-content">
+	<div id="globalWrapper" class="container">
+      <div class='span-5 append-1 menu'>
+      <div class="header"> </div>
+        <ul>
+          <li>
+            <a href='/about.html'>ABOUT</a>
+          </li>
+          <li>
+            <a href='http://opensprints.org/news'>NEWS</a>
+          </li>
+          <li>
+            <span>DOCUMENTATION</span>
+          </li>
+          <li>
+            <a href='http://opensprints.org/forum'>SUPPORT &amp; DISCUSSION</a>
+          </li>
+          <li>
+            <a href='/downloads.html'>DOWNLOADS</a>
+          </li>
+          <li>
+            <!-- /%a{:href => "http://store.opensprints.org"} PRODUCTS -->
+            <a href='/contact.html'>PRODUCTS</a>
+          </li>
+          <li class='louder'>
+            <a href='/contact.html'>CONTACT</a>
+          </li>
+        </ul>
+      </div>
+		<div id="column-content" class="intro span-14">
+    <div class="header_clear"></div>
 	<div id="content">
 		<a name="top" id="top"></a>
 		<?php if($this->data['sitenotice']) { ?><div id="siteNotice"><?php $this->html('sitenotice') ?></div><?php } ?>
@@ -131,7 +159,8 @@ class MonoBookTemplate extends QuickTemplate {
 		</div>
 	</div>
 		</div>
-		<div id="column-one">
+		<div id="column-one" class="span-3">
+    <div class="header_clear"></div>
 	<div id="p-cactions" class="portlet">
 		<h5><?php $this->msg('views') ?></h5>
 		<div class="pBody">
@@ -201,6 +230,10 @@ class MonoBookTemplate extends QuickTemplate {
 		</div><!-- end of the left (by default at least) column -->
 			<div class="visualClear"></div>
 			<div id="footer">
+        &copy; 2009 OpenSprints L.L.C. Some rights reserved.
+        <a href='http://creativecommons.org/licenses/by/3.0/us/' rel='license'>
+          <img alt='Creative Commons License' src='http://i.creativecommons.org/l/by/3.0/us/80x15.png' style='border-width:0' />
+        </a>
 <?php
 		if($this->data['poweredbyico']) { ?>
 				<div id="f-poweredbyico"><?php $this->html('poweredbyico') ?></div>
@@ -211,8 +244,7 @@ class MonoBookTemplate extends QuickTemplate {
 
 		// Generate additional footer links
 		$footerlinks = array(
-			'lastmod', 'viewcount', 'numberofwatchingusers', 'credits', 'copyright',
-			'privacy', 'about', 'disclaimer', 'tagline',
+			'lastmod', 'viewcount',
 		);
 		$validFooterLinks = array();
 		foreach( $footerlinks as $aLink ) {

@@ -11,9 +11,9 @@ body {
     color: #555;
     margin: 0;
     padding: 0.3em;
-    font-size: 65%;
+    /*font-size: 65%;*/
 }
-
+/*
 a { color: #002bb8; }
 a:visited { color: #5a3696; }
 a:active { color: #ffa500; }
@@ -22,7 +22,7 @@ a.new,
 #p-personal a.new { color:#ba0000; }
 a.new:visited,
 #p-personal a.new:visited { color:#a55858; }
-
+*/
 img {
     border: none;
     vertical-align: middle;
@@ -42,7 +42,7 @@ hr {
     margin: 0.2em 0 0.2em 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/*h1, h2, h3, h4, h5, h6 {
     color: Black;
     background: none;
     font-weight: normal;
@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 0.5em;
     padding-bottom: 0.17em;
     border-bottom: 1px solid #aaaaaa;
-}
+}*/
 .editsection {
 	font-weight: normal;
 }
@@ -246,7 +246,7 @@ table.small { font-size: 100% }
 #toc {
     /*border:1px solid #2f6fab;*/
     border:1px solid #aaaaaa;
-    background-color:#f9f9f9;
+    /* background-color:#f9f9f9; */
     padding:5px;
     font-size: 95%;
 }
@@ -360,7 +360,7 @@ table.rimage {
     padding: 0;
 }
 
-a.external { color: #3366bb; }
+/* a.external { color: #3366bb; } */
 div#footer { text-align: center; }
 ul#f-list li { list-style: none;  text-align: center; }
 div.portlet { margin: 0.5em 0; }
@@ -430,18 +430,10 @@ div.gallerytext {
 	display: none;
 }
 
-#footer {
-	background-color: white;
-	border-top: 3px solid #eee;
-	margin: .6em 0 1em 0;
-	padding: .4em 0 1.2em 0;
-	text-align: center;
-	font-size: 90%;
-}
 #f-poweredbyico, #f-copyrightico {
-	display: inline;
+	display: none;
 }
-
+/*
 a {
  color: #F06;
  text-decoration: none;
@@ -487,4 +479,9 @@ a:hover {
   margin: 0 auto;
   padding-top: 131px;
   background:transparent url(http://opensprints.org/news/images/logo_picture.jpg) no-repeat scroll 0 -520px;
+}*/
+
+
+#searchInput {
+  width: 10em
 }
