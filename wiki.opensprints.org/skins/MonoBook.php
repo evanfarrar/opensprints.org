@@ -115,7 +115,7 @@ class MonoBookTemplate extends QuickTemplate {
       <div class="header"> </div>
         <ul>
           <li>
-            <a href='/about.html'>ABOUT</a>
+            <a href='http://opensprints.org/about.html'>ABOUT</a>
           </li>
           <li>
             <a href='http://opensprints.org/news'>NEWS</a>
@@ -127,14 +127,14 @@ class MonoBookTemplate extends QuickTemplate {
             <a href='http://opensprints.org/forum'>SUPPORT &amp; DISCUSSION</a>
           </li>
           <li>
-            <a href='/downloads.html'>DOWNLOADS</a>
+            <a href='http://opensprints.org/downloads.html'>DOWNLOADS</a>
           </li>
           <li>
             <!-- /%a{:href => "http://store.opensprints.org"} PRODUCTS -->
-            <a href='/contact.html'>PRODUCTS</a>
+            <a href='http://opensprints.org/contact.html'>PRODUCTS</a>
           </li>
           <li class='louder'>
-            <a href='/contact.html'>CONTACT</a>
+            <a href='http://opensprints.org/contact.html'>CONTACT</a>
           </li>
         </ul>
       </div>
