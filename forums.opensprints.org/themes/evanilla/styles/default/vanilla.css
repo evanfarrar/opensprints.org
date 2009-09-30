@@ -1,12 +1,11 @@
 body {
   margin:0;
   padding:0;
-  background:#fff none top left repeat-y;
 }
 body,div,table,td {
   font-family:'Trebuchet MS',Verdana,Tahoma,Arial,sans-serif;
   font-size:12px;
-  color:#062971;
+/*  color:#062971; */
 }
 a {
   cursor:pointer;
@@ -67,24 +66,17 @@ a:hover {
   display:block;
 }
 #Session {
-  position:absolute;
-  top:140px;
   text-align:right;
   font-size:11px;
-  color:#5d709f;
 }
 #Session a {
-  color:#5d709f;
-  text-decoration:none;
 }
-#Session a:hover {
-  color:#000;
-}
+/*
 #Header {
   background:url(http://opensprints.org/news/images/logo_picture.jpg) no-repeat 0px -521px transparent;
   border-top:1px solid #acbedf;
   border-bottom:1px solid #acbedf;
-}
+}*/
 #Header * {
   margin:0;
   padding:0;
@@ -100,8 +92,6 @@ a:hover {
 }
 #Header ul {
   text-align:center;
-  padding-top: 121px;
-
 }
 #Header ul li {
   display:inline;
@@ -133,11 +123,9 @@ a:hover {
   text-decoration:underline;
 }
 #Panel {
-  width:20em;
-  float:right;
   background-image: none;
   display:inline;
-  background-color: #eee;
+  float: right;
 }
 #Panel * {
   margin:0;
@@ -149,19 +137,15 @@ a:hover {
   font-size:14px;
 }
 #Panel h1 a {
-  color:#c00;
   font-size:14px;
 }
 #Panel h1 a em {
   font-style:normal;
   text-decoration:underline;
-  color:#a00;
 }
 #Panel h1 a:hover {
-  color:#f00;
 }
 #Panel h2 {
-  color:#000;
   font-size:11px;
   border-bottom:1px solid #ccc;
   margin:10px 0 3px 0;
@@ -221,15 +205,12 @@ a:hover {
 }
 #Content {
   float: left;
-  width: 52em;
-  padding-top: 50px;
 }
 .ContentInfo {
   text-align:right;
 }
 .ContentInfo.Top {
   white-space:nowrap;
-  overflow:hidden;
 }
 #DiscussionsPage .Bottom {
   margin:-6px 0 8px 0;
@@ -241,7 +222,6 @@ a:hover {
   padding:0;
 }
 .ContentInfo h1 {
-  color:#000;
 }
 #CommentsPage .ContentInfo h1 {
   float:left;
@@ -311,9 +291,6 @@ html>body#CommentsPage .ContentInfo h1 {
   float:right;
 }
 #Discussions {
-  margin-top:-5px!important;
-  float:left;
-  width:100%;
 }
 #Discussions,#Discussions * {
   margin:0;
@@ -321,35 +298,32 @@ html>body#CommentsPage .ContentInfo h1 {
   list-style:none;
 }
 #Discussions li ul {
-  background-color:#fefecc;
   border-bottom:1px solid #ccc;
 }
 #Discussions li li {
   height:auto;
   border:0;
 }
+/*
 .NoNewComments,#Discussions li.Read ul {
   background-color:#fffeec!important;
 }
 .NewComments,#Discussions li.Read.NewComments ul {
   background-color:#fefecc!important;
-}
+}*/
 #Discussions li ul {
   padding:7px 6px 7px 6px;
   color:#777;
 }
 #Discussions ul span,#Discussions ul span a,#Discussions ul a {
-  color:#aaa;
   text-decoration:none;
 }
 #Discussions ul span a:hover,#Discussions ul a:hover {
-  color:#f00;
+  text-decoration:underline;
 }
 #Discussions ul a {
-  color:#777;
 }
 .Discussion {
-  background:yellow;
   margin:0;
   padding:0;
   overflow:hidden;
@@ -378,12 +352,9 @@ html>body#CommentsPage .ContentInfo h1 {
   display:none;
 }
 .DiscussionTopic a,.User.Name a {
-  color:#3354aa!important;
-  text-decoration:underline!important;
-  font-weight:bold;
+  text-decoration:underline !important;
 }
 .DiscussionTopic a:hover {
-  text-decoration:none!important;
 }
 .DiscussionCategory,.DiscussionStarted,.DiscussionComments,.DiscussionLastComment,.DiscussionActive,.DiscussionNew {
   width:auto;
@@ -413,10 +384,8 @@ html>body#CommentsPage .ContentInfo h1 {
   width:100%;
 }
 .BlockedCategory {
-  background:#fff;
 }
 .UnblockedCategory {
-  background:#f5f9ff;
 }
 #Categories li ul {
   border-bottom:1px solid #ccc;
@@ -429,14 +398,10 @@ html>body#CommentsPage .ContentInfo h1 {
   border:0;
 }
 #Categories ul span,#Categories ul span a,#Categories ul a {
-  color:#aaa;
-  text-decoration:none;
 }
 #Categories ul span a:hover,#Categories ul a:hover {
-  color:#f00;
 }
 #Categories ul a {
-  color:#777;
 }
 .Category {
   margin:0;
@@ -447,16 +412,12 @@ html>body#CommentsPage .ContentInfo h1 {
 .CategoryName {
   font-size:14px;
   margin-right:5px!important;
-  color:#062971!important;
   font-weight:bold;
   line-height:20px;
 }
 .CategoryName a {
-  color:#3354AA!important;
-  text-decoration:underline!important;
 }
 .CategoryName a:hover {
-  text-decoration:none!important;
 }
 .CategoryName span,.CategoryDescription span,.CategoryName.Normal {
   display:none;
@@ -572,7 +533,6 @@ html>body#CommentsPage .ContentInfo h1 {
 #Comments .CommentBody {
   display:block;
   margin:10px;
-  color:#000;
   font-size:13px;
   line-height:150%;
 }
@@ -1426,7 +1386,7 @@ html>body #AccountHistory {
 html>body #Content .ContentInfo.Bottom .PageInfo {
   border-top:1px solid #fff;
 }
-
+/*
 #SiteContainer {
   margin: 0 auto;
   width: 72em;
@@ -1440,7 +1400,7 @@ a:hover {
  color: #444;
  text-decoration: underline;
 }
-
+*/
 #Header h1 {
   display: none;
 }
