@@ -60,7 +60,7 @@ echo $HeadString . '</head>
             <a href="http://opensprints.org//downloads.html">DOWNLOADS</a>
           </li>
           <li>
-            <a href="http://opensprints.org/contact.html">PRODUCTS</a>
+            <a href="http://store.opensprints.org">PRODUCTS</a>
           </li>
           <li class="louder">
             <a href="http://opensprints.org/contact.html">CONTACT</a>
