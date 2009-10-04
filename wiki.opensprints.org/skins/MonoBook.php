@@ -112,7 +112,7 @@ class MonoBookTemplate extends QuickTemplate {
  class="mediawiki <?php $this->text('dir') ?> <?php $this->text('pageclass') ?> <?php $this->text('skinnameclass') ?>">
 	<div id="globalWrapper" class="container">
       <div class='span-5 append-1 menu'>
-      <div class="header"> </div>
+      <div class="header"><a href="http://opensprints.org"><img src="http://opensprints.org/images/logo_with_text.png" /></a></div>
         <ul>
           <li>
             <a href='http://opensprints.org/about.html'>ABOUT</a>
