@@ -1,0 +1,25 @@
+<div id="footer">
+  <span class="button">
+    <a href="http://twitter.com/opensprints">Follow us on twitter</a>
+  </span>
+  <span class="button">
+    <a href="http://twitter.com/opensprints">Add us on facebook</a>
+  </span>
+  <span>
+    &copy; 2009 OpenSprints L.L.C. Some rights reserved.
+    <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">
+      <img style="border-width: 0pt;" src="http://i.creativecommons.org/l/by/3.0/us/80x15.png" alt="Creative Commons License"/>
+    </a>
+  </span>
+</div>   
+<% if Spree::Config[:google_analytics_id] and not %w{development test}.include? RAILS_ENV and not params[:checkout_complete] %>
+  <script type="text/javascript">
+  	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  	var pageTracker = _gat._getTracker("<%= Spree::Config[:google_analytics_id] %>");
+  	pageTracker._initData();
+  	pageTracker._trackPageview();
+  </script>
+<% end %>

@@ -3,6 +3,8 @@
 <head>
 <%= render :partial => 'shared/head'%>
 <%= stylesheet_link_tag "compiled/site" %>
+<link href="http://opensprints.org/stylesheets/screen.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="http://opensprints.org/stylesheets/application.css" media="all" rel="stylesheet" type="text/css"/>
 </head>
 <%
 if @body_class.nil?
@@ -14,25 +16,38 @@ if @body_class.nil?
 end
  %>
 <body class="<%= @body_class %>"<%= %( id="#{@body_id}") if @body_id %>>
-  <div id="header" class="container"> 
-	<%# logo %>
-  </div>
-  <div id="wrapper" class="container"> 
-    <% if @content_for_sidebar %>
-    <div id="sidebar">
-      <h2>Sections</h2>
+  <div class="container"> 
+    <div class="span-5 append-1 menu">
+      <div class="header"></div>
       <ul>
-        <li><a href="http://opensprints.org/news/">News</a></li>
-        <li><a href="http://opensprints.org/forum">Support</a></li>
-        <li><a href="http://wiki.opensprints.org">Documentation</a></li>
-        <li><a href="http://github.com/evanfarrar/opensprints">Development</a></li>
-        <li><a href="http://www.flickr.com/photos/tags/opensprints/">Photos</a></li>
+        <li>
+          <a href="http://opensprints.org/about.html">ABOUT</a>
+        </li>
+        <li>
+          <a href="http://opensprints.org/news">NEWS</a>
+        </li>
+        <li>
+          <a href="http://wiki.opensprints.org">DOCUMENTATION</a>
+        </li>
+        <li>
+          <a href="http://opensprints.org/forum">SUPPORT &amp; DISCUSSION</a>
+        </li>
+        <li>
+          <a href="http://opensprints.org//downloads.html">DOWNLOADS</a>
+        </li>
+        <li>
+          <span>PRODUCTS</span>
+        </li>
+        <li class="louder">
+          <a href="http://opensprints.org/contact.html">CONTACT</a>
+        </li>
       </ul>
-      <%= yield :sidebar %>
+      <% if @content_for_sidebar %>
+        <%= yield :sidebar %>
+      <% end %>
     </div>
-    <% end %>
     
-    <div id="content">
+    <div class="intro span-14">
       <div class="clearfix">
       <ul id="nav-bar">
         <div id="login-bar">
