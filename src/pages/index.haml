@@ -1,21 +1,6 @@
 - @layout = "index"
 .span-5.append-1.menu
-  %ul
-    %li
-      %a{:href => "/about.html"} ABOUT
-    %li
-      %a{:href => "http://opensprints.org/news"} NEWS
-    %li
-      %a{:href => "http://wiki.opensprints.org"} DOCUMENTATION
-    %li
-      %a{:href => "http://opensprints.org/forum"} SUPPORT &amp; DISCUSSION
-    %li
-      %a{:href => "/downloads.html"} DOWNLOADS
-    %li
-      //%a{:href => "http://store.opensprints.org"} PRODUCTS
-      %a{:href => "/contact.html"} PRODUCTS
-    %li.louder
-      %a{:href => "/contact.html"} CONTACT
+  = partial('navigation', :locals => {:selected => ''})
 .intro.span-14
   %h2.louder
     The revolutions will be digitized

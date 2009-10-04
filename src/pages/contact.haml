@@ -1,21 +1,6 @@
 .span-5.append-1.menu
   .header
-  %ul
-    %li
-      %a{:href => '/about.html'} ABOUT
-    %li
-      %a{:href => "http://opensprints.org/news"} NEWS
-    %li
-      %a{:href => "http://wiki.opensprints.org"} DOCUMENTATION
-    %li
-      %a{:href => "http://opensprints.org/forum"} SUPPORT &amp; DISCUSSION
-    %li
-      %a{:href => "/downloads.html"} DOWNLOADS
-    %li
-      //%a{:href => "http://store.opensprints.org"} PRODUCTS
-      %a{:href => "/contact.html"} PRODUCTS
-    %li.louder
-      %span CONTACT
+  = partial('navigation', :locals => {:selected => "CONTACT"})
 .intro.span-14
   .header_clear
   .louder EMAIL
