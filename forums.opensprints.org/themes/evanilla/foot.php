@@ -8,10 +8,10 @@
 </div>
 <div id="footer">
   <span class="button">
-    <a href="http://twitter.com/opensprints">Follow us on twitter</a>
+    <a href="http://twitter.com/opensprints" target="_blank">Follow us on twitter</a>
   </span>
   <span class="button">
-    <a href="http://www.facebook.com/pages/Goldsprint/36441748980">Add us on facebook</a>
+    <a href="http://www.facebook.com/pages/Goldsprint/36441748980" target="_blank">Add us on facebook</a>
   </span>
   <span>
     &copy; 2009 OpenSprints L.L.C. Some rights reserved.
