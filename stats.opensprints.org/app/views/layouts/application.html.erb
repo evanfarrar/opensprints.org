@@ -4,11 +4,49 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title>CHANGEME</title>
+    <%= stylesheet_link_tag 'http://opensprints.org/stylesheets/screen.css', :media => 'all', :cache => true %>
+    <%= stylesheet_link_tag 'http://opensprints.org/stylesheets/application.css', :media => 'all', :cache => true %>
     <%= stylesheet_link_tag 'screen', :media => 'all', :cache => true %>
   </head>
   <body class="<%= body_class %>">
-    <%= render :partial => 'layouts/flashes' -%>
-    <%= yield %>
-    <%= render :partial => 'layouts/javascript' %>
+    <div class="container"> 
+      <div class="span-5 append-1 menu">
+        <div class="header"><a href="http://opensprints.org"><img src="http://opensprints.org/images/logo_with_text.png" /></a></div>
+        <ul>
+          <li>
+            <a href="http://opensprints.org/about.html">ABOUT</a>
+          </li>
+          <li>
+            <a href="http://opensprints.org/news">NEWS</a>
+          </li>
+          <li>
+            <a href="http://wiki.opensprints.org">DOCUMENTATION</a>
+          </li>
+          <li>
+            <a href="http://opensprints.org/forum">SUPPORT &amp; DISCUSSION</a>
+          </li>
+          <li>
+            <a href="http://opensprints.org/downloads.html">DOWNLOADS</a>
+          </li>
+          <li>
+            <span>STATS</span>
+          </li>
+          <li>
+            <a href="http://store.opensprints.org/">PRODUCTS</a>
+          </li>
+          <li class="louder">
+            <a href="http://opensprints.org/contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+      <div class="intro span-15">
+        <div class="header_clear"></div>
+      
+
+        <%= render :partial => 'layouts/flashes' -%>
+        <%= yield %>
+        <%= render :partial => 'layouts/javascript' %>
+      </div>
+    </div>
   </body>
 </html>
