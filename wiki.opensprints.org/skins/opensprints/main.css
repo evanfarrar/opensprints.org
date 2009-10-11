@@ -485,3 +485,6 @@ a:hover {
 #searchInput {
   width: 10em
 }
+table.diff, td.diff-otitle, td.diff-ntitle {
+background-color:none;
+}
