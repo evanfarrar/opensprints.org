@@ -486,5 +486,5 @@ a:hover {
   width: 10em
 }
 table.diff, td.diff-otitle, td.diff-ntitle {
-background-color:none;
+background-color:#0F0F0F;
 }
