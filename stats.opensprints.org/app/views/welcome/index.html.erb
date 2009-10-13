@@ -4,8 +4,10 @@ Welcome to the opensprints stats and storage page. This is a place for opensprin
 </p>
 
 <p>
-  <% User.all.each do |user| %>
- 
-  <% end %>
+  <ul><% User.all.each do |user| %>
+    <li><%= link_to(user.group_name,"group/#{user.group_name.parameterize}") %></li>
+  <% end %></ul>
 </p>
+
+Want to share your stats too? Just <%=link_to("sign up",new_user_path) %>!
 

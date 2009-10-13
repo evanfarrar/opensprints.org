@@ -2,8 +2,20 @@
   color: #FFCF01;
 }
 
-form.session ol {
+form.session ol, form.user ol {
   list-style-type: none
+}
+
+.error {
+  color: #AF1F11;
+  margin-bottom: 0px;
+  padding: 0px;
+  border: 0px solid black;
+  background: #0f0f0f;
+}
+
+.error p {
+  margin-bottom: 0em;
 }
 
 .formtastic fieldset {
