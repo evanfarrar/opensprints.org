@@ -1,0 +1,2 @@
+class DataUploadsController < ApplicationController
+end
