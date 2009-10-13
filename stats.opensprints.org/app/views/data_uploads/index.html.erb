@@ -1,0 +1,6 @@
+<h2>All Data uploads</h2>
+<ul>
+<% @data_uploads.each do |data_upload| %>
+  <li><%= link_to(data_upload.database_updated_at,data_upload.database.url)%></li>
+<% end %>
+</ul>

@@ -1,0 +1,17 @@
+<% if @user.data_uploads.any? %>
+  Yep.  
+<% else %>
+  <p>
+    Sorry, <%= @user.group_name %> does not have any stats to share with you yet.
+  </p>
+<% end %>
+
+<% if current_user == @user %>
+  <h2>Administration</h2>
+  <p>
+    <%= link_to "Upload your data", new_data_upload_path(:user_id => @user.id) %>
+  </p>
+  <p>
+    <%= link_to "Upload your config", new_config_file_path(:user_id => @user.id) %>
+  </p>
+<% end %>

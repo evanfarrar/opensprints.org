@@ -1,6 +1,6 @@
 <h2> Opensprints Stats </h2>
 <p>
-Welcome to the opensprints stats and storage page. This is a place for opensprints operators all over the world to share information with their racers and with one another. Browse the opertators' profiles for information about contests near and far:
+Welcome to the opensprints stats and storage page. This is a place for opensprints operators all over the world to share information with their racers and with one another. Browse the operators' profiles for information about contests near and far:
 </p>
 
 <p>
@@ -8,6 +8,8 @@ Welcome to the opensprints stats and storage page. This is a place for opensprin
     <li><%= link_to(user.group_name,"group/#{user.group_name.parameterize}") %></li>
   <% end %></ul>
 </p>
-
-Want to share your stats too? Just <%=link_to("sign up",new_user_path) %>!
-
+<% unless signed_in? %>
+  <p>
+    Want to share your stats too? Just <%=link_to("sign in!",new_session_path) %>
+  </p>
+<% end %>
