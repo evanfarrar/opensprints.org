@@ -18,13 +18,13 @@ Rails::Initializer.run do |config|
   # config.frameworks -= [ :active_record, :active_resource, :action_mailer ]
 
   # Specify gems that this application depends on.
-  config.gem 'RedCloth',
-             :lib => 'redcloth',
-             :version => '>= 4.2.2'
-  config.gem 'mislav-will_paginate',
-             :lib => 'will_paginate',
-             :source => 'http://gems.github.com',
-             :version => '~> 2.3.11'
+# config.gem 'RedCloth',
+#            :lib => 'redcloth',
+#            :version => '>= 4.2.2'
+# config.gem 'mislav-will_paginate',
+#            :lib => 'will_paginate',
+#            :source => 'http://gems.github.com',
+#            :version => '~> 2.3.11'
   config.gem 'thoughtbot-clearance',
              :lib => 'clearance',
              :source => 'http://gems.github.com',
