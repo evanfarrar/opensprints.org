@@ -1,5 +1,10 @@
 <% if @user.data_uploads.any? %>
-  Yep.  
+  <h2>Past Events by <%= @user.group_name %></h2>
+  <% @user.tournaments.reverse.each do |tournament| %>
+    <p>
+      <%= link_to(tournament.name,"/group/#{@user.group_name.parameterize}/event/#{tournament.pk}") %> (<%= tournament.tournament_participations.length %> racers)
+    </p>
+  <% end %>
 <% else %>
   <p>
     Sorry, <%= @user.group_name %> does not have any stats to share with you yet.

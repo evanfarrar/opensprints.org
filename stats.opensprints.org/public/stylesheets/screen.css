@@ -34,3 +34,7 @@ form.session ol, form.user ol {
 .session_links li {
   display: inline
 }
+
+.category h2 {
+  margin: 0px;
+}

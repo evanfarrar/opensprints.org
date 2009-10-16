@@ -23,6 +23,7 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => "welcome"
 
   map.group "group/:group_name", :controller => "group", :action => "show"
+  map.event "group/:group_name/event/:id", :controller => "event", :action => "show"
 
 
   # See how all your routes lay out with "rake routes"
