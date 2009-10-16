@@ -1,0 +1,16 @@
+== Opensprints.org
+This is the website for OpenSprints, the open source goldsprints solution. It's got a lot of smaller applications which go together to form a (semi) coherent whole
+ * StaticMatic generated static pages
+ * MediaWiki + opensprints skin
+ * Vanilla forum +
+ * TextPattern blog (completely vanilla, not sure why I have this in git, customization is done in SQL)
+ * Spree (Rails) store + opensprints extensions and plugins
+ * Rails stats app for gathering results of events.
+
+MediaWiki, Spree, Textpattern and Vanilla are all frozen in git, but they are intentionally unmodified. All changes were layered on top using css and the applications' existing plugin/skinning facilities.
+
+== Note on Patches/Pull Requests
+OpenSprints has an aggressively liberal commit policy. If you follow or fork the project on github, we'll add you the mainline project's collaborators list.
+
+== License
+This software is copyright 2007 Evan Farrar. You may redistribute this software under the terms of the GPL. See the LICENSE file for details.
