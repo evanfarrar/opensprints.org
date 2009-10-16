@@ -1,6 +1,7 @@
 - @layout = "index"
 .span-5.append-1.menu
-  = partial('navigation', :locals => {:selected => ''})
+  - @selected = ''
+  = partial('navigation')
 .intro.span-14
   %h2.louder
     The revolutions will be digitized

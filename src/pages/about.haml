@@ -2,7 +2,8 @@
   .header
     %a{:href => 'http://opensprints.org'}
       %img{:src => "http://opensprints.org/images/logo_with_text.png"}
-  = partial('navigation', :locals => {:selected => "ABOUT"})
+  - @selected = "ABOUT"
+  = partial('navigation')
 .intro.span-14
   .header_clear
   .louder
