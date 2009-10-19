@@ -51,13 +51,13 @@
         <ul class="second_level_nav">
         <% if signed_in? %>
           <li>
-            <%=link_to("My Events",group_path(:group_name)) %>
+            <%=link_to("My Events",group_path(current_user.group_name.parameterize)) %>
           </li>
           <li>
             <%=link_to("My Data",data_uploads_path(:user => current_user)) %>
           </li>
           <li>
-            <%=link_to("My Configuration",root_path) %>
+            <%=link_to("My Configuration",config_files_path(:user => current_user)) %>
           </li>
           <li>
             <%=link_to("Other Groups",root_path) %>
@@ -67,7 +67,7 @@
           </li>
         <% else %>
           <li>
-            <%=link_to("Groups",root_path) %>
+            <%=link_to("Home",root_path) %>
           </li>
           <li>
             <%=link_to("Sign In",new_session_path) %>

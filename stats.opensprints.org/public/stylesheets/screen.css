@@ -46,3 +46,5 @@ form.session ol, form.user ol {
 .second_level_nav {
   list-style-type: none;
 }
+
+dt { width: 15em; float: left; }

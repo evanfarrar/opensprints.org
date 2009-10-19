@@ -1,13 +1,12 @@
-<h2>All Data uploads<%= " from "+@user.group_name if @user %></h2>
+<h2>All Config Files<%= " from "+@user.group_name if @user %></h2>
 <table>
   <tbody>
     <% @data_uploads.each do |data_upload| %>
       <tr>
         <td>
-          <% if @user %>
-            <%= data_upload.database_updated_at.to_s(:long) %>
-          <% else %>
-            <%= data_upload.database_updated_at.to_s(:long)+" from "+data_upload.user.group_name %>
+          <%= data_upload.database_updated_at.to_s(:long) %>
+          <% unless @user %>
+            <%= " from "+data_upload.user.group_name %>
           <% end %>
         </td>
         <td>
@@ -20,3 +19,8 @@
     <% end %>
   </tbody>
 </table>
+<% if current_user == @user %>
+  <p>
+    <%= link_to "Upload your data", new_data_upload_path(:user_id => @user.id) %>
+  </p>
+<% end %>

@@ -1,0 +1,26 @@
+<h2>All Config Files<%= " from "+@user.group_name if @user %></h2>
+<table>
+  <tbody>
+    <% @config_files.each do |config_file| %>
+      <tr>
+        <td>
+          <%= config_file.config_updated_at.to_s(:long) %>
+          <% unless @user %>
+            <%= " from "+config_file.user.group_name %>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to("view",config_file_path(config_file))%>
+        </td>
+        <td>
+          <%= link_to("download",config_file.config.url)%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% if current_user == @user %>
+  <p>
+    <%= link_to "Upload your configuration", new_config_file_path(:user_id => @user.id) %>
+  </p>
+<% end %>

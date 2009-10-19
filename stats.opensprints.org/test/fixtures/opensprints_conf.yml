@@ -1,0 +1,18 @@
+--- 
+background_image: 
+menu_background_image: media/background.png
+window_width: "1024"
+track: progress_bars
+title: Open Sprints
+window_height: "600"
+race_distance: 200
+units: standard
+sensor: 
+  device: /dev/ttyUSB0
+  type: basic_message_arduino
+locale: it
+bikes: 
+- red
+- blue
+background_color: "\"#bec0c2\"...\"#86888b\""
+roller_circumference: 1.0
