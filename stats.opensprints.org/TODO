@@ -1,0 +1,24 @@
+Milestone 1
+  * logins and registration (done)
+  * paperclip the database file (done)
+  * paperclip the opensprints_conf.yml (done)
+
+Milestone 2
+  * Versioned configs and databases (done)
+  * Read the configs from the mysql (done)
+
+Milestone 3
+  * Look at a conf.yml in the view
+  * Browse a database's stats in the view (done)
+
+Milestone 4
+  * Navigate the stats for many users (done)
+  * Save and software, platform and version information for each user
+  * Display software version, firmware version and platform information on each user's profile
+ 
+Milestone 5
+  * Get and share skins
+  * Public API and downloadable dataset for the whole shebang
+
+Milestone 6
+  * Event pre-creation and pre-registration
