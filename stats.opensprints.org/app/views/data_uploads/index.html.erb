@@ -1,6 +1,22 @@
-<h2>All Data uploads</h2>
-<ul>
-<% @data_uploads.each do |data_upload| %>
-  <li><%= link_to(data_upload.database_updated_at,data_upload.database.url)%></li>
-<% end %>
-</ul>
+<h2>All Data uploads<%= " from "+@user.group_name if @user %></h2>
+<table>
+  <tbody>
+    <% @data_uploads.each do |data_upload| %>
+      <tr>
+        <td>
+          <% if @user %>
+            <%= data_upload.database_updated_at.to_s(:long) %>
+          <% else %>
+            <%= data_upload.database_updated_at.to_s(:long)+" from "+data_upload.user.group_name %>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to("view",data_upload_path(data_upload))%>
+        </td>
+        <td>
+          <%= link_to("download",data_upload.database.url)%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

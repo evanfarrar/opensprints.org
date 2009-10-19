@@ -10,6 +10,15 @@ class DataUploadsController < ApplicationController
   end
 
   def index
-    @data_uploads = DataUpload.find(:all,:conditions => {:user_id => current_user.id})
+    if params[:user]
+      @user = User.find(params[:user])
+      @data_uploads = DataUpload.find(:all,:conditions => {:user_id => params[:user]})
+    else
+      @data_uploads = DataUpload.find(:all)
+    end
+  end
+
+  def show
+    @data_upload = DataUpload.find(params[:id])
   end
 end

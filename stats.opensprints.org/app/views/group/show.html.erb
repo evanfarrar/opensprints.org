@@ -2,7 +2,7 @@
   <h2>Past Events by <%= @user.group_name %></h2>
   <% @user.tournaments.reverse.each do |tournament| %>
     <p>
-      <%= link_to(tournament.name,"/group/#{@user.group_name.parameterize}/event/#{tournament.pk}") %> (<%= tournament.tournament_participations.length %> racers)
+      <%= link_to(tournament.name, data_upload_event_path(@user.data_uploads.last,tournament.pk)) %> (<%= tournament.tournament_participations.length %> racers)
     </p>
   <% end %>
 <% else %>

@@ -1,0 +1,6 @@
+<h2>Past Events by <%= @data_upload.user.group_name %></h2>
+<% @data_upload.tournaments.reverse.each do |tournament| %>
+  <p>
+    <%= link_to(tournament.name,data_upload_event_path(@data_upload.id)) %> (<%= tournament.tournament_participations.length %> racers)
+  </p>
+<% end %>

@@ -1,5 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :data_uploads
+  map.resources :data_uploads do |data_uploads|
+    data_uploads.resources :events
+  end
 
   map.resources :config_files
 

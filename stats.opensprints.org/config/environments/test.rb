@@ -36,6 +36,7 @@ config.gem 'jtrupiano-timecop',
 config.gem 'fakeweb',
            :lib     => 'fakeweb',
            :version => '>= 1.2.5'
+config.gem 'mocha'
 
 # Webrat and dependencies
 # NOTE: don't vendor nokogiri - it's a binary Gem

@@ -1,0 +1,49 @@
+<h1 class="event_name"><%= @event.name %></h1>
+<h3>presented by <%= link_to(@user.group_name,"/group/#{@user.group_name.parameterize}")%></h3>
+<div class="category">
+  <h2>Overall</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Best Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @event.tournament_participations.sort_by{|tp|[(tp.best_time||Infinity)]}.each do |racer| %>
+        <tr>
+          <td><%= racer.rank %></td>
+          <td><%= racer.racer.name %></td>
+          <td><%= racer.best_time %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<% Category.all.each do |category| %>
+   <% racers = TournamentParticipation.filter(:tournament_id => @event.pk).all.select{|tp|tp.racer.categorizations.map(&:category).include? category} %>
+  <% if racers.any? %>
+    <div class="category">
+      <h2><%= category.name %></h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Best Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% racers.sort_by{|tp|[(tp.best_time||Infinity)]}.each do |racer| %>
+            <tr>
+              <td><%= racer.rank %></td>
+              <td><%= racer.racer.name %></td>
+              <td><%= racer.best_time %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
+<% end %>

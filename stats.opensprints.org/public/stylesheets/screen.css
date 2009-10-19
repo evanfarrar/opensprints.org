@@ -42,3 +42,7 @@ form.session ol, form.user ol {
 .event_name {
   margin: 0px;
 }
+
+.second_level_nav {
+  list-style-type: none;
+}

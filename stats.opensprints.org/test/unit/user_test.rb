@@ -20,5 +20,15 @@ class UserTest < ActiveSupport::TestCase
       u.save!
       assert_equal "salt-city-sprints",u.group_name_for_url
     end
+
+    should "delegate all data upload methods to the most recent" do
+      @user = User.create
+      data_upload1 = mock()
+      data_upload1.stubs(:tournaments).returns("first")
+      data_upload2 = mock()
+      data_upload2.stubs(:tournaments).returns("last")
+      @user.expects(:data_uploads).returns([data_upload1, data_upload2])
+      assert_equal "last", @user.tournaments
+    end
   end
 end
