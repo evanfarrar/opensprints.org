@@ -4,7 +4,7 @@
     <% @config_files.each do |config_file| %>
       <tr>
         <td>
-          <%= config_file.config_updated_at.to_s(:long) %>
+          <%= config_file.updated_at.to_s(:long) %>
           <% unless @user %>
             <%= " from "+config_file.user.group_name %>
           <% end %>

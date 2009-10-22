@@ -4,7 +4,7 @@
     <% @data_uploads.each do |data_upload| %>
       <tr>
         <td>
-          <%= data_upload.database_updated_at.to_s(:long) %>
+          <%= data_upload.updated_at.to_s(:long) %>
           <% unless @user %>
             <%= " from "+data_upload.user.group_name %>
           <% end %>
