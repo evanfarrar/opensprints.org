@@ -95,28 +95,17 @@ a:hover {
 }
 #Header ul li {
   display:inline;
-  margin:0 1px;
-  border-bottom:1px solid #acbedf;
 }
 #Header ul li.TabOn {
-  background-color:#fff;
-  border:1px solid #acbedf;
-  border-bottom:1px solid #fff;
   font-weight:bold;
 }
 #Header ul li a {
   padding:1px 5px;
   font-size:11px;
-  text-decoration:none;
-  background-color:#5d709f;
-  color:#fff;
 }
 #Header ul li a:hover {
-  background-color:#919ebe;
 }
 #Header ul li.TabOn a,#Header ul li.TabOn a:hover {
-  background-color:#fff;
-  color:#000;
 }
 #Header ul li a em {
   font-style:normal;
@@ -242,18 +231,12 @@ html>body#CommentsPage .ContentInfo h1 {
   text-align:left;
 }
 .ContentInfo h1 a {
-  color:#3354aa;
-  text-decoration:none;
 }
 .ContentInfo h1 a:hover {
-  color:#000;
 }
 .ContentInfo a {
-  color:#bbb;
-  text-decoration:none;
 }
 .ContentInfo a:hover {
-  color:#3354aa;
 }
 .PageInfo {
   color:#bbb;
@@ -283,8 +266,6 @@ html>body#CommentsPage .ContentInfo h1 {
   display:inline;
 }
 .PageList a,.PageList li a {
-  text-decoration:none;
-  color:#3354aa!important;
 }
 #PageJump {
   margin:9px 0 0 20px;
@@ -333,7 +314,6 @@ html>body#CommentsPage .ContentInfo h1 {
   font-size:14px;
   float:left;
   margin-right:5px!important;
-  color:#062971;
   font-weight:bold;
   line-height:20px;
 }
@@ -363,7 +343,7 @@ html>body#CommentsPage .ContentInfo h1 {
   margin-right:10px!important;
 }
 .NewComments .DiscussionNew a {
-  color:#c00!important;
+  color:#FFCF01!important;
 }
 #Discussions li.Read.NewComments .DiscussionNew {
   display:inline;
@@ -493,14 +473,12 @@ html>body#CommentsPage .ContentInfo h1 {
 }
 #Comments li.Hidden .CommentHeader i {
   padding-left:8px;
-  color:#c00;
+  color:#FFCF01;
   font-style:normal;
 }
 #Comments .CommentHeader a {
-  text-decoration:none;
   font-weight:bold;
   font-size:14px;
-  color:#3354aa;
 }
 #Comments .CommentHeader span {
   font-size:10px;
@@ -1164,7 +1142,6 @@ div.Applicants ul {
 #AccountProfile {
   float:left;
   width:300px;
-  border-right:1px solid #ccc;
 }
 #AccountProfile * {
   margin:0;
@@ -1187,7 +1164,6 @@ div.Applicants ul {
 }
 #AccountProfile h2 {
   font-size:14px;
-  color:#000;
   width:60%;
   float:left;
 }
