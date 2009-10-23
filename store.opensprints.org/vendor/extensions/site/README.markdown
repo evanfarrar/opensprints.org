@@ -1,3 +1,0 @@
-= Site
-
-Description goes here
